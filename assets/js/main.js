@@ -84,12 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = btn.getAttribute('data-target');
       
       expTabButtons.forEach(b => {
-        b.classList.remove('active', 'bg-sky-600', 'text-white', 'shadow-md');
-        b.classList.add('text-slate-400', 'hover:text-white');
+        b.classList.remove('active', 'bg-amber-600', 'text-white', 'shadow-md');
+        b.classList.add('text-stone-400', 'hover:text-white');
       });
 
-      btn.classList.add('active', 'bg-sky-600', 'text-white', 'shadow-md');
-      btn.classList.remove('text-slate-400', 'hover:text-white');
+      btn.classList.add('active', 'bg-amber-600', 'text-white', 'shadow-md');
+      btn.classList.remove('text-stone-400', 'hover:text-white');
 
       if (target === 'it') {
         itExpContainer.classList.remove('hidden');
@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const filter = btn.getAttribute('data-filter');
 
       projectFilterBtns.forEach(b => {
-        b.classList.remove('bg-sky-600', 'text-white', 'active');
-        b.classList.add('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700');
+        b.classList.remove('bg-amber-600', 'text-white', 'active');
+        b.classList.add('bg-stone-800/80', 'text-stone-300', 'hover:bg-stone-700');
       });
 
-      btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700');
-      btn.classList.add('bg-sky-600', 'text-white', 'active');
+      btn.classList.remove('bg-stone-800/80', 'text-stone-300', 'hover:bg-stone-700');
+      btn.classList.add('bg-amber-600', 'text-white', 'active');
 
       projectCards.forEach(card => {
         const category = card.getAttribute('data-category');
@@ -182,11 +182,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     navLinks.forEach(link => {
-      link.classList.remove('text-sky-400', 'font-semibold');
-      link.classList.add('text-slate-300');
+      link.classList.remove('text-amber-400', 'font-semibold');
+      link.classList.add('text-stone-300');
       if (link.getAttribute('href') === `#${current}`) {
-        link.classList.remove('text-slate-300');
-        link.classList.add('text-sky-400', 'font-semibold');
+        link.classList.remove('text-stone-300');
+        link.classList.add('text-amber-400', 'font-semibold');
       }
     });
   });

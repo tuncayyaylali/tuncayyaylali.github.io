@@ -1048,22 +1048,44 @@
             I actively publish in-depth articles on Medium breaking down complex data engineering topics.
           </p>
 
-          <div class="p-6 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border space-y-4">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <i class="fa-brands fa-medium text-3xl text-stone-900 dark:text-white"></i>
-                <div>
-                  <h4 class="font-bold text-stone-900 dark:text-white">Medium Publications</h4>
-                  <span class="text-xs font-mono text-amber-500">@tuncayyaylali</span>
-                </div>
+          <!-- Medium Publications List Container -->
+          <div class="space-y-4">
+            <div class="flex items-center justify-between pb-2 border-b border-stone-200 dark:border-stonebg-border">
+              <div class="flex items-center gap-2">
+                <i class="fa-brands fa-medium text-2xl text-stone-900 dark:text-white"></i>
+                <span class="font-bold text-stone-900 dark:text-white text-sm" data-en="Published Articles" data-tr="Yayımlanan Makaleler">Published Articles</span>
               </div>
-              <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-stone-100 dark:bg-stonebg-border text-xs font-mono font-semibold hover:bg-amber-600 hover:text-white transition-colors">
-                Read on Medium &rarr;
+              <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                <span>@tuncayyaylali</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
               </a>
             </div>
-            <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400">
-              Covering Lakehouses on K8s, Ceph storage integration, dbt best practices, Airflow DAG optimization, and real-time event streaming with Redpanda.
-            </p>
+
+            <!-- Articles List -->
+            <div id="medium-articles-list" class="space-y-3">
+              <!-- Article 1: Automating Email Processing and Sentiment Analysis with RabbitMQ, Ollama, and Gmail API -->
+              <a href="https://medium.com/@tuncayyaylali/automating-email-processing-and-sentiment-analysis-with-rabbitmq-ollama-and-gmail-api-3ad6b6ee4015?sharedUserId=tuncayyaylali" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
+                    <i class="fa-brands fa-medium"></i>
+                  </div>
+                  <div class="min-w-0">
+                    <h4 class="font-bold text-stone-900 dark:text-white text-sm sm:text-base group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors line-clamp-2">
+                      Automating Email Processing and Sentiment Analysis with RabbitMQ, Ollama, and Gmail API
+                    </h4>
+                    <span class="text-xs font-mono text-stone-500 dark:text-stone-400 flex items-center gap-1.5 mt-0.5">
+                      <span>medium.com</span> &bull; <span class="text-amber-600 dark:text-amber-400">Read Article &rarr;</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="w-8 h-8 rounded-lg bg-stone-100 dark:bg-stonebg-border flex items-center justify-center text-stone-400 group-hover:text-amber-500 group-hover:bg-amber-500/10 shrink-0 transition-colors">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 

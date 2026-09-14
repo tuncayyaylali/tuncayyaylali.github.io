@@ -24,19 +24,17 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
+            primary: {
+              DEFAULT: '#0284c7',
+              hover: '#0369a1',
+              light: '#38bdf8'
             },
             dark: {
               bg: '#0B1120',
               card: '#131D32',
-              cardhover: '#1B2944',
+              cardhover: '#18243C',
               border: '#1E293B',
-              borderlight: '#334155'
+              borderlight: '#2E3D56'
             }
           }
         }
@@ -47,28 +45,28 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom CSS -->
+  <!-- Custom Minimalist CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen selection:bg-sky-500 selection:text-white">
+<body class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen selection:bg-sky-600 selection:text-white">
 
   <!-- Floating Toast Notification for Copied Email -->
-  <div id="copy-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-2 opacity-0 pointer-events-none transition-all duration-300 bg-emerald-600 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3">
-    <i class="fa-solid fa-circle-check text-xl"></i>
-    <span class="font-medium" data-en="Email copied to clipboard!" data-tr="E-posta panoya kopyalandı!">Email copied to clipboard!</span>
+  <div id="copy-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-2 opacity-0 pointer-events-none transition-all duration-200 bg-dark-card border border-sky-500/40 text-slate-100 px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+    <i class="fa-solid fa-circle-check text-sky-400 text-lg"></i>
+    <span class="text-sm font-medium" data-en="Email copied to clipboard!" data-tr="E-posta panoya kopyalandı!">Email copied to clipboard!</span>
   </div>
 
   <!-- Navigation Bar -->
-  <header class="sticky top-0 z-40 w-full border-b border-slate-200/80 dark:border-dark-border/80 bg-white/80 dark:bg-dark-bg/80 glass-nav transition-colors duration-300">
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200 dark:border-dark-border bg-white/90 dark:bg-dark-bg/90 glass-nav transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand / Logo -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white font-mono font-bold text-lg shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+        <div class="w-10 h-10 rounded-xl bg-sky-600 flex items-center justify-center text-white font-mono font-bold text-base shadow-md shadow-sky-600/20 group-hover:bg-sky-500 transition-all">
           TY
         </div>
         <div>
-          <span class="font-bold text-lg tracking-tight group-hover:text-sky-500 transition-colors">Tuncay Yaylalı</span>
+          <span class="font-bold text-base tracking-tight group-hover:text-sky-500 transition-colors">Tuncay Yaylalı</span>
           <span class="block text-xs font-mono text-sky-600 dark:text-sky-400">Data Engineer</span>
         </div>
       </a>
@@ -87,19 +85,19 @@
       <!-- Action Buttons (Lang, Theme, Resume) -->
       <div class="hidden sm:flex items-center gap-3">
         <!-- Language Switcher -->
-        <button id="lang-toggle" title="Switch Language" class="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-dark-border hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-mono font-semibold transition-colors flex items-center gap-1.5">
+        <button id="lang-toggle" title="Switch Language" class="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-dark-border hover:bg-slate-100 dark:hover:bg-dark-card text-xs font-mono font-semibold transition-colors flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
           <i class="fa-solid fa-globe text-sky-500"></i>
           <span class="lang-indicator">TR</span>
         </button>
 
         <!-- Theme Toggle Button -->
-        <button id="theme-toggle" title="Toggle Theme" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-dark-border hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 transition-colors">
-          <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
-          <i class="fa-solid fa-moon block dark:hidden text-indigo-600"></i>
+        <button id="theme-toggle" title="Toggle Theme" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-dark-border hover:bg-slate-100 dark:hover:bg-dark-card flex items-center justify-center text-slate-600 dark:text-slate-300 transition-colors">
+          <i class="fa-solid fa-sun hidden dark:block text-sky-400"></i>
+          <i class="fa-solid fa-moon block dark:hidden text-sky-600"></i>
         </button>
 
         <!-- Resume Download -->
-        <a href="assets/docs/Tuncay_Yaylali_CV.pdf" download="Tuncay_Yaylali_CV.pdf" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-md shadow-sky-600/20 hover:shadow-sky-600/30 transition-all">
+        <a href="assets/docs/Tuncay_Yaylali_CV.pdf" download="Tuncay_Yaylali_CV.pdf" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-500 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm transition-all">
           <i class="fa-solid fa-file-arrow-down"></i>
           <span data-en="CV PDF" data-tr="CV İndir">CV PDF</span>
         </a>
@@ -111,10 +109,10 @@
           <span class="lang-indicator">TR</span>
         </button>
         <button id="theme-toggle-mobile" class="p-2 text-slate-600 dark:text-slate-300">
-          <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
-          <i class="fa-solid fa-moon block dark:hidden text-indigo-600"></i>
+          <i class="fa-solid fa-sun hidden dark:block text-sky-400"></i>
+          <i class="fa-solid fa-moon block dark:hidden text-sky-600"></i>
         </button>
-        <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-dark-card">
           <i class="fa-solid fa-bars text-xl"></i>
         </button>
       </div>
@@ -142,19 +140,13 @@
   <!-- ========================================================================= -->
   <!-- HERO SECTION                                                              -->
   <!-- ========================================================================= -->
-  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden mesh-gradient-dark">
+  <section id="hero" class="relative pt-12 pb-20 md:pt-24 md:pb-32 overflow-hidden mesh-gradient-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Text Content -->
         <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
-          
-          <!-- Availability Badge -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-medium">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 status-pulse"></span>
-            <span data-en="Open to Data Engineering & Cloud Architecture roles" data-tr="Veri Mühendisliği ve Bulut Mimarisi rollerine açık">Open to Data Engineering & Cloud Architecture roles</span>
-          </div>
 
           <!-- Main Title -->
           <div class="space-y-2">
@@ -173,22 +165,22 @@
             Inspired by the boundless innovation of the digital world, I transitioned to IT as a Data Engineer in 2022, building on a rigorous 24-year foundation in Environmental Engineering and large-scale project coordination. I architect resilient Data Lakehouses, streaming pipelines, and Kubernetes infrastructure across on-premise and multi-cloud ecosystems.
           </p>
 
-          <!-- Key Certification Badges -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 font-mono text-xs font-semibold">
-              <i class="fa-brands fa-aws text-sm"></i> AWS Certified Solutions Architect - Associate
+          <!-- Key Certification Badges (Clean Monochromatic) -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-1">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-card border border-slate-200 dark:border-dark-border text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold">
+              <i class="fa-brands fa-aws text-sky-500 text-sm"></i> AWS Solutions Architect - Associate
             </span>
-            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-700 dark:text-sky-400 font-mono text-xs font-semibold">
-              <i class="fa-solid fa-snowflake text-sm"></i> Snowflake SnowPro Core Certified
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-card border border-slate-200 dark:border-dark-border text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold">
+              <i class="fa-solid fa-snowflake text-sky-500 text-sm"></i> SnowPro Core Certified
             </span>
-            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/30 text-indigo-700 dark:text-indigo-400 font-mono text-xs font-semibold">
-              <i class="fa-solid fa-dharmachakra text-sm"></i> Kubernetes & OpenShift Native
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-card border border-slate-200 dark:border-dark-border text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold">
+              <i class="fa-solid fa-dharmachakra text-sky-500 text-sm"></i> Kubernetes & Lakehouse Native
             </span>
           </div>
 
           <!-- CTAs & Social Links -->
-          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm shadow-lg shadow-sky-600/25 transition-all flex items-center gap-2">
+          <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm shadow-sm transition-all flex items-center gap-2">
               <i class="fa-solid fa-layer-group"></i>
               <span data-en="Explore Projects" data-tr="Projeleri İncele">Explore Projects</span>
             </a>
@@ -211,51 +203,33 @@
 
         </div>
 
-        <!-- Right: Profile Portrait & Floating Cards -->
+        <!-- Right: Clean Minimalist Portrait (No floating badges, no rainbow glow) -->
         <div class="lg:col-span-4 flex justify-center">
-          <div class="relative w-64 h-64 sm:w-80 sm:h-80">
-            <!-- Glow background circle -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-sky-600 to-indigo-600 rounded-3xl rotate-6 opacity-30 filter blur-xl animate-pulse"></div>
-            
-            <!-- Photo Card -->
-            <div class="relative w-full h-full rounded-3xl overflow-hidden border-2 border-sky-500/30 bg-dark-card shadow-2xl p-2">
-              <img src="assets/images/profile.jpg" alt="Tuncay Yaylalı" 
-                   onerror="this.onerror=null; this.src='https://github.com/tuncayyaylali.png';"
-                   class="w-full h-full object-cover rounded-2xl">
-            </div>
-
-            <!-- Floating Tech Tag: Kafka / Spark -->
-            <div class="absolute -bottom-4 -left-6 bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border px-3.5 py-2 rounded-xl shadow-lg flex items-center gap-2">
-              <i class="fa-solid fa-bolt text-amber-400"></i>
-              <span class="text-xs font-mono font-bold text-slate-800 dark:text-slate-200">Streaming & Lakehouse</span>
-            </div>
-
-            <!-- Floating Tech Tag: Kubernetes -->
-            <div class="absolute -top-4 -right-4 bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border px-3.5 py-2 rounded-xl shadow-lg flex items-center gap-2">
-              <i class="fa-solid fa-cloud text-sky-400"></i>
-              <span class="text-xs font-mono font-bold text-slate-800 dark:text-slate-200">Multi-Cloud / K8s</span>
-            </div>
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border border-slate-200 dark:border-dark-border bg-white dark:bg-dark-card shadow-lg p-2">
+            <img src="assets/images/profile.jpg" alt="Tuncay Yaylalı" 
+                 onerror="this.onerror=null; this.src='https://github.com/tuncayyaylali.png';"
+                 class="w-full h-full object-cover rounded-xl">
           </div>
         </div>
 
       </div>
 
-      <!-- Quick Metrics Counter Strip -->
+      <!-- Metrics Counter Strip (Unified Colors) -->
       <div class="mt-16 pt-10 border-t border-slate-200 dark:border-dark-border grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="p-4 rounded-2xl bg-white/50 dark:bg-dark-card/50 border border-slate-200 dark:border-dark-border text-center">
-          <div class="text-3xl sm:text-4xl font-extrabold text-sky-500">25+</div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border text-center">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-600 dark:text-sky-400">25+</div>
           <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1" data-en="Years of Engineering Rigor" data-tr="Yıllık Mühendislik Disiplini">Years of Engineering Rigor</div>
         </div>
-        <div class="p-4 rounded-2xl bg-white/50 dark:bg-dark-card/50 border border-slate-200 dark:border-dark-border text-center">
-          <div class="text-3xl sm:text-4xl font-extrabold text-indigo-500">2x</div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border text-center">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-600 dark:text-sky-400">2x</div>
           <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1" data-en="AWS & Snowflake Certifications" data-tr="AWS & Snowflake Sertifikaları">AWS & Snowflake Certifications</div>
         </div>
-        <div class="p-4 rounded-2xl bg-white/50 dark:bg-dark-card/50 border border-slate-200 dark:border-dark-border text-center">
-          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-500">20+</div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border text-center">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-600 dark:text-sky-400">20+</div>
           <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1" data-en="Open-Source Tools Integrated" data-tr="Açık Kaynak Araç Entegrasyonu">Open-Source Tools Integrated</div>
         </div>
-        <div class="p-4 rounded-2xl bg-white/50 dark:bg-dark-card/50 border border-slate-200 dark:border-dark-border text-center">
-          <div class="text-3xl sm:text-4xl font-extrabold text-amber-500">100+</div>
+        <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border text-center">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-600 dark:text-sky-400">100+</div>
           <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1" data-en="Bootcamp Students Mentored" data-tr="Mentorluk Verilen Öğrenci">Bootcamp Students Mentored</div>
         </div>
       </div>
@@ -312,15 +286,15 @@
                 <p class="text-slate-600 dark:text-slate-300 text-xs">Management Information Systems - Istanbul University</p>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-dark-bg border border-slate-200 dark:border-dark-border">
-                <span class="font-bold text-indigo-600 dark:text-indigo-400">M.Sc Occupational Safety (2021)</span>
+                <span class="font-bold text-sky-600 dark:text-sky-400">M.Sc Occupational Safety (2021)</span>
                 <p class="text-slate-600 dark:text-slate-300 text-xs">Marmara University</p>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-dark-bg border border-slate-200 dark:border-dark-border">
-                <span class="font-bold text-emerald-600 dark:text-emerald-400">M.Sc Environmental Mgmt (2020)</span>
+                <span class="font-bold text-sky-600 dark:text-sky-400">M.Sc Environmental Mgmt (2020)</span>
                 <p class="text-slate-600 dark:text-slate-300 text-xs">Eskisehir Technical University</p>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-dark-bg border border-slate-200 dark:border-dark-border">
-                <span class="font-bold text-amber-600 dark:text-amber-400">B.Sc Business Admin (2020)</span>
+                <span class="font-bold text-sky-600 dark:text-sky-400">B.Sc Business Admin (2020)</span>
                 <p class="text-slate-600 dark:text-slate-300 text-xs">Anadolu University</p>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-dark-bg border border-slate-200 dark:border-dark-border sm:col-span-2">
@@ -331,38 +305,38 @@
           </div>
         </div>
 
-        <!-- Right Column: Core Architectural Principles -->
+        <!-- Right Column: Core Architectural Principles (Clean Uniform Cards) -->
         <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-sky-500/10 to-transparent border border-sky-500/20">
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
             <div class="flex items-center gap-3 mb-2">
               <i class="fa-solid fa-cubes-stacked text-sky-500 text-xl"></i>
               <h4 class="font-bold text-slate-900 dark:text-white" data-en="End-to-End Data Lakehouses" data-tr="Uçtan Uca Data Lakehouse'lar">End-to-End Data Lakehouses</h4>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300"
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"
                data-en="Designing open-source architectures leveraging Redpanda, Spark Operator, CEPH, Project Nessie, and Trino to eliminate vendor lock-in and cut infrastructure costs by up to 90%."
                data-tr="Redpanda, Spark Operator, CEPH, Nessie ve Trino kullanarak satıcı bağımlılığını ortadan kaldıran ve altyapı maliyetlerini %90'a varan oranda düşüren açık kaynak mimariler.">
               Designing open-source architectures leveraging Redpanda, Spark Operator, CEPH, Project Nessie, and Trino to eliminate vendor lock-in.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20">
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
             <div class="flex items-center gap-3 mb-2">
-              <i class="fa-solid fa-database text-indigo-500 text-xl"></i>
+              <i class="fa-solid fa-database text-sky-500 text-xl"></i>
               <h4 class="font-bold text-slate-900 dark:text-white" data-en="Resilient Batch & Streaming ELT" data-tr="Dayanıklı Batch & Streaming ELT">Resilient Batch & Streaming ELT</h4>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300"
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"
                data-en="Crafting dependable pipelines with Airflow, dbt, Snowflake, and BigQuery. Proven track record of recovering weeks of lost mission-critical data and halving SQL query latency."
                data-tr="Airflow, dbt, Snowflake ve BigQuery ile sağlam veri boru hatları. Kritik kayıp verileri eksiksiz kurtarma ve SQL sorgu gecikmelerini yarı yarıya düşürme tecrübesi.">
               Crafting dependable pipelines with Airflow, dbt, Snowflake, and BigQuery.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20">
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
             <div class="flex items-center gap-3 mb-2">
-              <i class="fa-solid fa-users-gear text-emerald-500 text-xl"></i>
+              <i class="fa-solid fa-users-gear text-sky-500 text-xl"></i>
               <h4 class="font-bold text-slate-900 dark:text-white" data-en="Knowledge Sharing & Mentorship" data-tr="Bilgi Paylaşımı & Mentorluk">Knowledge Sharing & Mentorship</h4>
             </div>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300"
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"
                data-en="Trained and mentored hundreds of students in Data101, Data Engineering, and MLOps bootcamps across Snowflake, Databricks, Terraform, and storage architectures."
                data-tr="Data101, Veri Mühendisliği ve MLOps kamplarında yüzlerce öğrenciye Snowflake, Databricks, Terraform ve depolama mimarileri üzerine eğitmenlik ve mentorluk.">
               Trained and mentored hundreds of students in Data101, Data Engineering, and MLOps bootcamps.
@@ -407,7 +381,7 @@
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border overflow-hidden flex flex-col justify-between" data-category="lakehouse">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-500 text-xs font-mono font-bold">Telecom PoC (85% Success)</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-dark-border text-sky-600 dark:text-sky-400 text-xs font-mono font-bold">Telecom PoC (85% Success)</span>
               <a href="https://github.com/tuncayyaylali/lakehouse" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-500 transition-colors" title="View on GitHub">
                 <i class="fa-brands fa-github text-xl"></i>
               </a>
@@ -419,16 +393,16 @@
               Engineered a 100% open-source lakehouse running on bare-metal Rancher RKE2. Reduced deployment time by 90% via automated configuration management.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">RKE2 K8s</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Redpanda</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Spark Operator</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">CEPH</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Project Nessie</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Trino</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">RKE2 K8s</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Redpanda</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Spark Operator</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">CEPH</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Project Nessie</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Trino</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-slate-100 dark:border-dark-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-emerald-500 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i>90% Faster Deployment</span>
+            <span class="text-sky-600 dark:text-sky-400 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i>90% Faster Deployment</span>
             <a href="https://github.com/tuncayyaylali/lakehouse" target="_blank" rel="noopener noreferrer" class="font-mono text-sky-500 hover:underline">Repo Link &rarr;</a>
           </div>
         </div>
@@ -437,8 +411,8 @@
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border overflow-hidden flex flex-col justify-between" data-category="lakehouse">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-500 text-xs font-mono font-bold">Data Governance</span>
-              <a href="https://github.com/tuncayyaylali/UnityCatalog" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-500 transition-colors" title="View on GitHub">
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-dark-border text-sky-600 dark:text-sky-400 text-xs font-mono font-bold">Data Governance</span>
+              <a href="https://github.com/tuncayyaylali/UnityCatalog" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-500 transition-colors" title="View on GitHub">
                 <i class="fa-brands fa-github text-xl"></i>
               </a>
             </div>
@@ -449,16 +423,16 @@
               Complete multi-engine unified data catalog and security layer deployed on Kubernetes with Keycloak OIDC and Trino.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400">Unity Catalog</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400">MinIO</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400">Keycloak</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400">Trino</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400">Delta Lake</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Unity Catalog</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">MinIO</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Keycloak</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Trino</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Delta Lake</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-slate-100 dark:border-dark-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-indigo-500 font-medium"><i class="fa-solid fa-shield-halved mr-1"></i>OIDC & Role-Based Access</span>
-            <a href="https://github.com/tuncayyaylali/UnityCatalog" target="_blank" rel="noopener noreferrer" class="font-mono text-indigo-500 hover:underline">Repo Link &rarr;</a>
+            <span class="text-sky-600 dark:text-sky-400 font-medium"><i class="fa-solid fa-shield-halved mr-1"></i>OIDC & Role-Based Access</span>
+            <a href="https://github.com/tuncayyaylali/UnityCatalog" target="_blank" rel="noopener noreferrer" class="font-mono text-sky-500 hover:underline">Repo Link &rarr;</a>
           </div>
         </div>
 
@@ -466,7 +440,7 @@
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border overflow-hidden flex flex-col justify-between" data-category="etl">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-500 text-xs font-mono font-bold">Cloud Warehouse ELT</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-dark-border text-sky-600 dark:text-sky-400 text-xs font-mono font-bold">Cloud Warehouse ELT</span>
               <span class="text-xs font-mono text-slate-400">Fleet Analytics</span>
             </div>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">E-Scooter Fleet Data Recovery & ELT</h3>
@@ -476,14 +450,14 @@
               Supported ETL pipelines across AWS S3, dbt Cloud, Snowflake, and BigQuery, recovering 17 days of missing critical data.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-amber-600 dark:text-amber-400">AWS S3</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-amber-600 dark:text-amber-400">Snowflake</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-amber-600 dark:text-amber-400">dbt Cloud</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-amber-600 dark:text-amber-400">Google BigQuery</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">AWS S3</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Snowflake</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">dbt Cloud</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Google BigQuery</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-slate-100 dark:border-dark-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-emerald-500 font-medium"><i class="fa-solid fa-check-double mr-1"></i>100% Reporting Accuracy</span>
+            <span class="text-sky-600 dark:text-sky-400 font-medium"><i class="fa-solid fa-check-double mr-1"></i>100% Reporting Accuracy</span>
             <span class="font-mono text-slate-400">Production</span>
           </div>
         </div>
@@ -492,7 +466,7 @@
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border overflow-hidden flex flex-col justify-between" data-category="etl">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-500 text-xs font-mono font-bold">Query Optimization</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-dark-border text-sky-600 dark:text-sky-400 text-xs font-mono font-bold">Query Optimization</span>
               <span class="text-xs font-mono text-slate-400">Apache Airflow</span>
             </div>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">MongoDB Nested Data Flattening to BigQuery</h3>
@@ -502,14 +476,14 @@
               Flattened complex nested NoSQL data structures from MongoDB to BigQuery using Airflow, slashing query latency by 50%.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400">Apache Airflow</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400">MongoDB</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400">Google BigQuery</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Apache Airflow</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">MongoDB</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Google BigQuery</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Python</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-slate-100 dark:border-dark-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-emerald-500 font-medium"><i class="fa-solid fa-gauge-high mr-1"></i>50% Faster Query Speed</span>
+            <span class="text-sky-600 dark:text-sky-400 font-medium"><i class="fa-solid fa-gauge-high mr-1"></i>50% Faster Query Speed</span>
             <span class="font-mono text-slate-400">Airflow DAG</span>
           </div>
         </div>
@@ -518,7 +492,7 @@
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border overflow-hidden flex flex-col justify-between" data-category="lakehouse observability">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-500 text-xs font-mono font-bold">AI Platform Engineering</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-dark-border text-sky-600 dark:text-sky-400 text-xs font-mono font-bold">AI Platform Engineering</span>
               <span class="text-xs font-mono text-slate-400">OpenShift & Cloud</span>
             </div>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Practicus AI Platform Deployment</h3>
@@ -528,15 +502,15 @@
               Multi-environment deployment of the Practicus AI Data Intelligence Platform across OpenShift and major cloud vendors with observability.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">OpenShift</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">AWS / GCP</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Prometheus</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Grafana</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-sky-600 dark:text-sky-400">Fluentd</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">OpenShift</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">AWS / GCP</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Prometheus</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Grafana</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Fluentd</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-slate-100 dark:border-dark-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-sky-500 font-medium"><i class="fa-solid fa-heart-pulse mr-1"></i>Full-Stack Observability</span>
+            <span class="text-sky-600 dark:text-sky-400 font-medium"><i class="fa-solid fa-heart-pulse mr-1"></i>Full-Stack Observability</span>
             <span class="font-mono text-slate-400">Enterprise AI</span>
           </div>
         </div>
@@ -545,12 +519,12 @@
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border overflow-hidden flex flex-col justify-between" data-category="observability">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-500 text-xs font-mono font-bold">Security & Identity</span>
+              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-dark-border text-sky-600 dark:text-sky-400 text-xs font-mono font-bold">Security & Identity</span>
               <div class="flex gap-2">
-                <a href="https://github.com/tuncayyaylali/grafana_with_ldap" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-500 transition-colors" title="Grafana LDAP Repo">
+                <a href="https://github.com/tuncayyaylali/grafana_with_ldap" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-500 transition-colors" title="Grafana LDAP Repo">
                   <i class="fa-brands fa-github text-lg"></i>
                 </a>
-                <a href="https://github.com/tuncayyaylali/superset_with_keycloak_and_ldap" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-500 transition-colors" title="Superset Keycloak Repo">
+                <a href="https://github.com/tuncayyaylali/superset_with_keycloak_and_ldap" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-500 transition-colors" title="Superset Keycloak Repo">
                   <i class="fa-brands fa-github text-lg"></i>
                 </a>
               </div>
@@ -562,15 +536,15 @@
               Production Kubernetes setups integrating OpenLDAP, phpLDAPadmin, and Keycloak for SSO and RBAC across Superset and Grafana.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400">OpenLDAP</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400">Keycloak</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400">Apache Superset</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400">Grafana</span>
-              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-purple-600 dark:text-purple-400">NetworkPolicy</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">OpenLDAP</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Keycloak</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Apache Superset</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">Grafana</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-dark-border text-slate-700 dark:text-slate-300">NetworkPolicy</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-slate-100 dark:border-dark-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-purple-500 font-medium"><i class="fa-solid fa-lock mr-1"></i>SSO & RBAC Automated</span>
+            <span class="text-sky-600 dark:text-sky-400 font-medium"><i class="fa-solid fa-lock mr-1"></i>SSO & RBAC Automated</span>
             <span class="font-mono text-slate-400">GitOps Ready</span>
           </div>
         </div>
@@ -597,7 +571,7 @@
       <!-- Sector Switcher Tabs -->
       <div class="flex justify-center mb-12">
         <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
-          <button class="exp-tab-btn px-6 py-2.5 rounded-xl font-mono text-xs sm:text-sm font-semibold transition-all bg-sky-600 text-white shadow-md active" data-target="it">
+          <button class="exp-tab-btn px-6 py-2.5 rounded-xl font-mono text-xs sm:text-sm font-semibold transition-all bg-sky-600 text-white shadow-sm active" data-target="it">
             <i class="fa-solid fa-server mr-2"></i>
             <span data-en="IT & Data Engineering (2022 - Present)" data-tr="IT & Veri Mühendisliği (2022 - Günümüz)">IT & Data Engineering (2022 - Present)</span>
           </button>
@@ -613,11 +587,11 @@
         
         <!-- Role 1: Practicus AI -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-500 text-white shadow-lg shadow-sky-500/30 z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-600 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-brain text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0">
-            <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">02.2025 – 07.2025</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">02.2025 – 07.2025</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Practicus AI LLC</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Data Engineer &bull; Ankara (Remote)</p>
           </div>
@@ -647,7 +621,7 @@
 
         <!-- Role 2: Datalonga -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-600 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-network-wired text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0 sm:order-1">
@@ -673,7 +647,7 @@
             </div>
           </div>
           <div class="w-full sm:w-1/2 sm:pl-12 pl-12 mt-2 sm:mt-0 sm:order-2">
-            <span class="px-2.5 py-1 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-mono text-xs font-bold">12.2023 – 01.2025</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">12.2023 – 01.2025</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Datalonga Information Technologies</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Data Engineer &bull; Istanbul (Hybrid)</p>
           </div>
@@ -681,11 +655,11 @@
 
         <!-- Role 3: Vodafone Turkey (via Bentego) -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-red-500 text-white shadow-lg shadow-red-500/30 z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-600 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-tower-broadcast text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0">
-            <span class="px-2.5 py-1 rounded bg-red-500/10 text-red-600 dark:text-red-400 font-mono text-xs font-bold">01.2023 – 04.2023</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">01.2023 – 04.2023</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Vodafone Turkey (via Bentego)</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Data Engineer &bull; Istanbul (Remote)</p>
           </div>
@@ -707,7 +681,7 @@
 
         <!-- Role 4: Bentego Technology -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500 text-white shadow-lg shadow-emerald-500/30 z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-600 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-laptop-code text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0 sm:order-1">
@@ -725,7 +699,7 @@
             </div>
           </div>
           <div class="w-full sm:w-1/2 sm:pl-12 pl-12 mt-2 sm:mt-0 sm:order-2">
-            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold">11.2022 – 04.2023</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">11.2022 – 04.2023</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Bentego Technology Inc.</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Data Engineer &bull; Istanbul (Hybrid)</p>
           </div>
@@ -738,11 +712,11 @@
         
         <!-- Env Role 1: Savra -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-emerald-600 text-white shadow-lg z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-mountain text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0">
-            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono text-xs font-bold">03.2020 – 10.2022</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">03.2020 – 10.2022</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Savra Consultancy</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Technical Coordinator &bull; Ankara</p>
           </div>
@@ -755,7 +729,7 @@
 
         <!-- Env Role 2: Hidromark -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-cyan-600 text-white shadow-lg z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-water text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0 sm:order-1">
@@ -764,7 +738,7 @@
             </div>
           </div>
           <div class="w-full sm:w-1/2 sm:pl-12 pl-12 mt-2 sm:mt-0 sm:order-2">
-            <span class="px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-mono text-xs font-bold">11.2018 – 02.2020</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">11.2018 – 02.2020</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Hidromark Eng. Consultancy</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Department Coordinator &bull; Ankara</p>
           </div>
@@ -772,11 +746,11 @@
 
         <!-- Env Role 3: Duru Çevre (Co-Founder & Manager) -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-teal-600 text-white shadow-lg z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-briefcase text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0">
-            <span class="px-2.5 py-1 rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 font-mono text-xs font-bold">02.2007 – 11.2016 (9+ Years)</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">02.2007 – 11.2016 (9+ Years)</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Duru Environmental Tech & Lab</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Co-Founder & General Manager &bull; Ankara</p>
           </div>
@@ -789,7 +763,7 @@
 
         <!-- Env Role 4: Ministry of Environment and Forestry -->
         <div class="relative flex flex-col sm:flex-row items-start group">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-green-700 text-white shadow-lg z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 text-white shadow-md z-10 sm:absolute sm:left-1/2 sm:-translate-x-1/2 mb-4 sm:mb-0">
             <i class="fa-solid fa-landmark text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0 sm:order-1">
@@ -798,7 +772,7 @@
             </div>
           </div>
           <div class="w-full sm:w-1/2 sm:pl-12 pl-12 mt-2 sm:mt-0 sm:order-2">
-            <span class="px-2.5 py-1 rounded bg-green-500/10 text-green-600 dark:text-green-400 font-mono text-xs font-bold">12.1998 – 09.2004</span>
+            <span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-dark-card text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">12.1998 – 09.2004</span>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Ministry of Environment & Forestry</h3>
             <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Environmental Engineer &bull; Ankara</p>
           </div>
@@ -834,108 +808,108 @@
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Cloud & DevOps</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Amazon Web Services (AWS)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Google Cloud (GCP)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Kubernetes (K8s / RKE2)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Red Hat OpenShift</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Docker</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Terraform</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Ansible</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Helm & Kustomize</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">GitHub Actions & Jenkins</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Amazon Web Services (AWS)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Google Cloud (GCP)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Kubernetes (K8s / RKE2)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Red Hat OpenShift</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Docker</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Terraform</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Ansible</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Helm & Kustomize</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">GitHub Actions & Jenkins</span>
           </div>
         </div>
 
         <!-- Category 2: Big Data & Processing -->
         <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center font-bold text-lg">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold text-lg">
               <i class="fa-solid fa-server"></i>
             </div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Big Data & Processing</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Apache Spark</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">PySpark & Spark Streaming</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Apache Kafka & Redpanda</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Apache Iceberg</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Delta Lake</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Trino Query Engine</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Hadoop, HDFS & Hive</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Pandas, NumPy, PyArrow</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Apache Spark</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">PySpark & Spark Streaming</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Apache Kafka & Redpanda</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Apache Iceberg</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Delta Lake</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Trino Query Engine</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Hadoop, HDFS & Hive</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Pandas, NumPy, PyArrow</span>
           </div>
         </div>
 
         <!-- Category 3: Databases & Storage -->
         <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-lg">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold text-lg">
               <i class="fa-solid fa-database"></i>
             </div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Databases & Storage</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Snowflake (SnowPro Core)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Google BigQuery</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">PostgreSQL & MySQL</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">MongoDB</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">CEPH (Block & Object)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">MinIO S3</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Apache Cassandra</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Elasticsearch</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">HBase & Impala</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Snowflake (SnowPro Core)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Google BigQuery</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">PostgreSQL & MySQL</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">MongoDB</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">CEPH (Block & Object)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">MinIO S3</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Apache Cassandra</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Elasticsearch</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">HBase & Impala</span>
           </div>
         </div>
 
         <!-- Category 4: Workflow & Orchestration -->
         <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold text-lg">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold text-lg">
               <i class="fa-solid fa-diagram-project"></i>
             </div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Workflow & Orchestration</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Apache Airflow</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">dbt Core & dbt Cloud</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Project Nessie Catalog</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Unity Catalog</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Cloudera Data Platform</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Apache Airflow</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">dbt Core & dbt Cloud</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Project Nessie Catalog</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Unity Catalog</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Cloudera Data Platform</span>
           </div>
         </div>
 
         <!-- Category 5: Languages & APIs -->
         <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center font-bold text-lg">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold text-lg">
               <i class="fa-solid fa-code"></i>
             </div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Programming & OS</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Python</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">SQL & T-SQL</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Bash & Linux Shell</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Linux (Ubuntu / RHEL)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">FastAPI</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">MLflow</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Python</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">SQL & T-SQL</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Bash & Linux Shell</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Linux (Ubuntu / RHEL)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">FastAPI</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">MLflow</span>
           </div>
         </div>
 
         <!-- Category 6: Observability & BI -->
         <div class="p-6 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center font-bold text-lg">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-bold text-lg">
               <i class="fa-solid fa-chart-line"></i>
             </div>
             <h3 class="text-lg font-bold text-slate-900 dark:text-white">Observability & BI</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Prometheus</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Grafana</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Apache Superset</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Fluentd</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono font-medium">Keycloak SSO & OpenLDAP</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Prometheus</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Grafana</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Apache Superset</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Fluentd</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-dark-border text-xs font-mono text-slate-700 dark:text-slate-300">Keycloak SSO & OpenLDAP</span>
           </div>
         </div>
 
@@ -958,33 +932,34 @@
         <div class="w-16 h-1 bg-sky-500 mx-auto rounded-full"></div>
       </div>
 
+      <!-- Two Primary Certifications (Clean, Minimalist Uniform Style) -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         
         <!-- AWS Certificate -->
-        <div class="p-8 rounded-3xl bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-transparent border-2 border-amber-500/30 flex flex-col sm:flex-row items-center gap-6 shadow-xl shadow-amber-500/5">
-          <div class="w-20 h-20 rounded-2xl bg-amber-500/20 text-amber-500 flex items-center justify-center text-4xl flex-shrink-0">
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+          <div class="w-16 h-16 rounded-2xl bg-sky-500/10 text-sky-500 flex items-center justify-center text-3xl flex-shrink-0">
             <i class="fa-brands fa-aws"></i>
           </div>
-          <div class="space-y-2 text-center sm:text-left">
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono text-xs font-bold">
+          <div class="space-y-1.5 text-center sm:text-left">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-slate-200 dark:bg-dark-border text-slate-700 dark:text-slate-300 font-mono text-xs font-bold">
               Active: 10.2023 – 10.2026
             </div>
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">AWS Certified Solutions Architect - Associate</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300">Amazon Web Services (SAA-C03) &bull; Earned on the first attempt</p>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">AWS Certified Solutions Architect - Associate</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Amazon Web Services (SAA-C03) &bull; Earned on the first attempt</p>
           </div>
         </div>
 
         <!-- Snowflake Certificate -->
-        <div class="p-8 rounded-3xl bg-gradient-to-br from-sky-500/10 via-sky-500/5 to-transparent border-2 border-sky-500/30 flex flex-col sm:flex-row items-center gap-6 shadow-xl shadow-sky-500/5">
-          <div class="w-20 h-20 rounded-2xl bg-sky-500/20 text-sky-500 flex items-center justify-center text-4xl flex-shrink-0">
+        <div class="p-8 rounded-3xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+          <div class="w-16 h-16 rounded-2xl bg-sky-500/10 text-sky-500 flex items-center justify-center text-3xl flex-shrink-0">
             <i class="fa-solid fa-snowflake"></i>
           </div>
-          <div class="space-y-2 text-center sm:text-left">
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-600 dark:text-sky-400 font-mono text-xs font-bold">
+          <div class="space-y-1.5 text-center sm:text-left">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-slate-200 dark:bg-dark-border text-slate-700 dark:text-slate-300 font-mono text-xs font-bold">
               Issued: 11.2022
             </div>
-            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">SnowPro Core Certification</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300">Snowflake Computing &bull; Earned on the first attempt</p>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">SnowPro Core Certification</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Snowflake Computing &bull; Earned on the first attempt</p>
           </div>
         </div>
 
@@ -993,22 +968,22 @@
       <!-- Bootcamps Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="p-5 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
-          <span class="text-xs font-mono text-sky-500">10.2023 – 07.2024</span>
+          <span class="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold">10.2023 – 07.2024</span>
           <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">Cloud Engineer Bootcamp</h4>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Istanbul Data Science Academy</p>
         </div>
         <div class="p-5 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
-          <span class="text-xs font-mono text-indigo-500">03.2024 – 06.2024</span>
+          <span class="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold">03.2024 – 06.2024</span>
           <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">Kubernetes Bootcamp</h4>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Veri Bilimi Okulu (VBO)</p>
         </div>
         <div class="p-5 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
-          <span class="text-xs font-mono text-emerald-500">04.2022 – 09.2022</span>
+          <span class="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold">04.2022 – 09.2022</span>
           <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">Data Engineer Path</h4>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Miuul</p>
         </div>
         <div class="p-5 rounded-2xl bg-slate-50 dark:bg-dark-card border border-slate-200 dark:border-dark-border">
-          <span class="text-xs font-mono text-purple-500">02.2022 – 06.2022</span>
+          <span class="text-xs font-mono text-sky-600 dark:text-sky-400 font-bold">02.2022 – 06.2022</span>
           <h4 class="font-bold text-slate-900 dark:text-white text-sm mt-1">MLOps Bootcamp</h4>
           <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Veri Bilimi Okulu (VBO)</p>
         </div>
@@ -1048,7 +1023,7 @@
                   <span class="text-xs font-mono text-sky-500">@tuncayyaylali</span>
                 </div>
               </div>
-              <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-dark-border text-xs font-mono font-semibold hover:bg-sky-500 hover:text-white transition-colors">
+              <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-dark-border text-xs font-mono font-semibold hover:bg-sky-600 hover:text-white transition-colors">
                 Read on Medium &rarr;
               </a>
             </div>
@@ -1061,7 +1036,7 @@
         <!-- Right: Beyond the Code / Hobbies -->
         <div class="lg:col-span-5 space-y-6">
           <div class="space-y-2">
-            <span class="text-xs font-mono font-bold tracking-wider uppercase text-indigo-600 dark:text-indigo-400" data-en="Beyond The Code" data-tr="Kodun Ötesinde">Beyond The Code</span>
+            <span class="text-xs font-mono font-bold tracking-wider uppercase text-sky-600 dark:text-sky-400" data-en="Beyond The Code" data-tr="Kodun Ötesinde">Beyond The Code</span>
             <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white" data-en="Personal Interests & Hobbies" data-tr="Kişisel İlgi Alanları & Hobiler">
               Personal Interests & Hobbies
             </h2>
@@ -1069,17 +1044,17 @@
 
           <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
             <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-2">
-              <i class="fa-solid fa-person-hiking text-emerald-500 text-xl"></i>
+              <i class="fa-solid fa-person-hiking text-sky-500 text-xl"></i>
               <h4 class="font-bold text-slate-900 dark:text-white">Hiking & Climbing</h4>
               <p class="text-slate-500 dark:text-slate-400 text-xs">Amateur mountain climbing and nature trekking on sunny days.</p>
             </div>
             <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-2">
-              <i class="fa-solid fa-utensils text-amber-500 text-xl"></i>
+              <i class="fa-solid fa-utensils text-sky-500 text-xl"></i>
               <h4 class="font-bold text-slate-900 dark:text-white">Pastry & Baking</h4>
               <p class="text-slate-500 dark:text-slate-400 text-xs">Baking delicious pastries and delicate dairy desserts with precision.</p>
             </div>
             <div class="p-4 rounded-2xl bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border space-y-2">
-              <i class="fa-solid fa-music text-purple-500 text-xl"></i>
+              <i class="fa-solid fa-music text-sky-500 text-xl"></i>
               <h4 class="font-bold text-slate-900 dark:text-white">Celtic & Cinematic</h4>
               <p class="text-slate-500 dark:text-slate-400 text-xs">Loreena McKennitt's Celtic melodies & Ramin Djawadi's compositions.</p>
             </div>
@@ -1102,12 +1077,12 @@
   <section id="contact" class="py-20 border-t border-slate-200 dark:border-dark-border bg-white dark:bg-dark-bg relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="p-8 sm:p-14 rounded-3xl bg-gradient-to-tr from-sky-900/40 via-dark-card to-indigo-950/40 border border-sky-500/20 shadow-2xl relative overflow-hidden">
+      <div class="p-8 sm:p-14 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl relative overflow-hidden">
         
         <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           <div class="lg:col-span-8 space-y-4">
-            <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 font-mono text-xs font-bold">Let's Connect</span>
+            <span class="px-3 py-1 rounded-md bg-slate-800 text-sky-400 font-mono text-xs font-bold">Let's Connect</span>
             <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white" data-en="Ready to discuss data pipelines or cloud architecture?" data-tr="Veri mimarileri veya projeler üzerine konuşalım mı?">
               Ready to discuss data pipelines or cloud architecture?
             </h2>
@@ -1118,11 +1093,11 @@
             </p>
 
             <div class="flex flex-wrap items-center gap-4 pt-2">
-              <button class="copy-email-btn px-5 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-mono font-medium text-sm transition-all flex items-center gap-2.5 shadow-lg shadow-sky-600/30">
+              <button class="copy-email-btn px-5 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-mono font-medium text-sm transition-all flex items-center gap-2.5 shadow-sm">
                 <i class="fa-solid fa-copy"></i>
                 <span>tuncayyaylali@gmail.com</span>
               </button>
-              <a href="tel:+905327115037" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-mono font-medium text-sm transition-all flex items-center gap-2.5">
+              <a href="tel:+905327115037" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono font-medium text-sm transition-all flex items-center gap-2.5">
                 <i class="fa-solid fa-phone"></i>
                 <span>+90 532 711 5037</span>
               </a>
@@ -1134,7 +1109,7 @@
           </div>
 
           <div class="lg:col-span-4 flex flex-col gap-3">
-            <a href="https://linkedin.com/in/tuncayyaylali/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white flex items-center justify-between transition-colors group">
+            <a href="https://linkedin.com/in/tuncayyaylali/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
                 <i class="fa-brands fa-linkedin text-2xl text-sky-400"></i>
                 <div>
@@ -1145,7 +1120,7 @@
               <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
             </a>
 
-            <a href="https://github.com/tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white flex items-center justify-between transition-colors group">
+            <a href="https://github.com/tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
                 <i class="fa-brands fa-github text-2xl text-slate-200"></i>
                 <div>
@@ -1156,9 +1131,9 @@
               <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
             </a>
 
-            <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white flex items-center justify-between transition-colors group">
+            <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700/60 text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
-                <i class="fa-brands fa-medium text-2xl text-amber-400"></i>
+                <i class="fa-brands fa-medium text-2xl text-slate-200"></i>
                 <div>
                   <div class="font-bold text-sm">Medium</div>
                   <div class="text-xs text-slate-400">@tuncayyaylali</div>
@@ -1178,8 +1153,8 @@
           &copy; <span id="current-year"></span> Tuncay Yaylalı. All rights reserved.
         </div>
         <div class="flex items-center gap-4">
-          <span class="inline-flex items-center gap-1.5 text-emerald-500">
-            <i class="fa-solid fa-bolt"></i> 100% Free Hosting via GitHub Pages
+          <span class="inline-flex items-center gap-1.5 text-sky-500">
+            <i class="fa-solid fa-bolt"></i> Hosted on GitHub Pages
           </span>
           <span>&bull;</span>
           <a href="#hero" class="hover:text-sky-500 transition-colors">Back to top &uarr;</a>
@@ -1193,4 +1168,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-

@@ -90,12 +90,88 @@ html:not(.dark) ::-webkit-scrollbar-thumb:hover {
     radial-gradient(at 100% 100%, rgba(245, 245, 244, 0.8) 0px, transparent 50%);
 }
 
-/* Tab active styling transitions */
-.tab-btn {
-  transition: all 0.2s ease-in-out;
-}
-
 /* Toast notification */
 #copy-toast {
   transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* ==========================================================================
+   BUTTON & TAB CONTRAST FIXES (Light & Dark Mode)
+   ========================================================================== */
+
+/* Project Filter Buttons (Default / Light Mode) */
+.project-filter-btn {
+  background-color: #f5f5f4 !important; /* stone-100 */
+  color: #292524 !important; /* stone-800 - high contrast */
+  border: 1px solid #d6d3d1 !important; /* stone-300 */
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-filter-btn:hover {
+  background-color: #e7e5e4 !important; /* stone-200 */
+  color: #0c0a09 !important;
+}
+
+/* Project Filter Buttons (Dark Mode) */
+html.dark .project-filter-btn {
+  background-color: #181B22 !important;
+  color: #e7e5e4 !important; /* stone-200 */
+  border: 1px solid #262A35 !important;
+}
+
+html.dark .project-filter-btn:hover {
+  background-color: #262A35 !important;
+  color: #ffffff !important;
+}
+
+/* Project Filter Buttons (ACTIVE State - Both Modes) */
+.project-filter-btn.active,
+html.dark .project-filter-btn.active {
+  background-color: #d97706 !important; /* amber-600 */
+  color: #ffffff !important; /* White on amber */
+  border-color: #d97706 !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25) !important;
+}
+
+.project-filter-btn.active:hover,
+html.dark .project-filter-btn.active:hover {
+  background-color: #b45309 !important; /* amber-700 */
+  color: #ffffff !important;
+}
+
+/* Experience Tab Buttons (Default / Light Mode) */
+.exp-tab-btn {
+  color: #44403c !important; /* stone-700 */
+  font-weight: 600 !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.exp-tab-btn:hover {
+  color: #0c0a09 !important;
+}
+
+/* Experience Tab Buttons (Dark Mode) */
+html.dark .exp-tab-btn {
+  color: #a8a29e !important; /* stone-400 */
+}
+
+html.dark .exp-tab-btn:hover {
+  color: #ffffff !important;
+}
+
+/* Experience Tab Buttons (ACTIVE State - Both Modes) */
+.exp-tab-btn.active,
+html.dark .exp-tab-btn.active {
+  background-color: #d97706 !important; /* amber-600 */
+  color: #ffffff !important; /* White on amber */
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3) !important;
+}
+
+.exp-tab-btn.active:hover,
+html.dark .exp-tab-btn.active:hover {
+  background-color: #b45309 !important;
+  color: #ffffff !important;
 }

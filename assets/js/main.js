@@ -83,13 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-target');
       
-      expTabButtons.forEach(b => {
-        b.classList.remove('active', 'bg-amber-600', 'text-white', 'shadow-md');
-        b.classList.add('text-stone-400', 'hover:text-white');
-      });
-
-      btn.classList.add('active', 'bg-amber-600', 'text-white', 'shadow-md');
-      btn.classList.remove('text-stone-400', 'hover:text-white');
+      expTabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
       if (target === 'it') {
         itExpContainer.classList.remove('hidden');
@@ -109,13 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const filter = btn.getAttribute('data-filter');
 
-      projectFilterBtns.forEach(b => {
-        b.classList.remove('bg-amber-600', 'text-white', 'active');
-        b.classList.add('bg-stone-800/80', 'text-stone-300', 'hover:bg-stone-700');
-      });
-
-      btn.classList.remove('bg-stone-800/80', 'text-stone-300', 'hover:bg-stone-700');
-      btn.classList.add('bg-amber-600', 'text-white', 'active');
+      projectFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
       projectCards.forEach(card => {
         const category = card.getAttribute('data-category');

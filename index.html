@@ -692,175 +692,36 @@
       <!-- Projects Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Project 1: Open-Source Kubernetes Lakehouse -->
+        <!-- Project 1: Modern Open-Source Lakehouse Platform on Kubernetes -->
         <div class="project-card glass-card rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border overflow-hidden flex flex-col justify-between" data-category="lakehouse">
           <div class="p-6 space-y-4">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">Telecom PoC (85% Success)</span>
-              <a href="https://github.com/tuncayyaylali/lakehouse" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-amber-500 transition-colors" title="View on GitHub">
+              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">Lakehouse &amp; K8s</span>
+              <a href="https://github.com/tuncayyaylali/lakehouse.git" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-amber-500 transition-colors" title="View on GitHub">
                 <i class="fa-brands fa-github text-xl"></i>
               </a>
             </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Kubernetes-Native Data Lakehouse</h3>
+            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Modern Open-Source Lakehouse Platform on Kubernetes</h3>
             <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed"
-               data-en="Engineered a 100% open-source lakehouse running on bare-metal Rancher RKE2. Simulated telemetry streams from Redpanda were processed by Spark Operator, persisted in CEPH Object Storage, cataloged with Nessie, and queried with Trino and Superset."
-               data-tr="Bare-metal Rancher RKE2 üzerinde %100 açık kaynaklı bir lakehouse tasarlandı. Redpanda'dan gelen akış verileri Spark Operator ile işlendi, CEPH Object Storage'a yazıldı, Nessie ile kataloglandı, Trino ve Superset ile görselleştirildi.">
-              Engineered a 100% open-source lakehouse running on bare-metal Rancher RKE2. Reduced deployment time by 90% via automated configuration management.
+               data-en="An enterprise-grade, end-to-end modern Lakehouse platform deployed natively on Kubernetes (Kind / k3s) leveraging Keycloak (IAM/SSO), MinIO (S3 Object Storage), Project Nessie (Iceberg REST Catalog), Apache Iceberg (Table Format), Trino (Distributed SQL Query Engine), Apache Airflow (Orchestration), and dbt (Transformations) with native DBeaver desktop client connectivity."
+               data-tr="Kubernetes (Kind / k3s) üzerinde yerel olarak çalışan; Keycloak (IAM/SSO), MinIO (S3 Nesne Depolama), Project Nessie (Iceberg REST Kataloğu), Apache Iceberg (Tablo Formatı), Trino (Dağıtık SQL Sorgu Motoru), Apache Airflow (Orkestrasyon) ve dbt (Dönüşümler) bileşenlerini masaüstü DBeaver istemci bağlantısıyla sunan kurumsal düzeyde uçtan uca modern bir Lakehouse platformu.">
+              An enterprise-grade, end-to-end modern Lakehouse platform deployed natively on Kubernetes (Kind / k3s) leveraging Keycloak (IAM/SSO), MinIO (S3 Object Storage), Project Nessie (Iceberg REST Catalog), Apache Iceberg (Table Format), Trino (Distributed SQL Query Engine), Apache Airflow (Orchestration), and dbt (Transformations) with native DBeaver desktop client connectivity.
             </p>
             <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">RKE2 K8s</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Redpanda</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Spark Operator</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">CEPH</span>
+              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Kubernetes (Kind / k3s)</span>
+              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Apache Iceberg</span>
               <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Project Nessie</span>
               <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Trino</span>
-            </div>
-          </div>
-          <div class="p-6 pt-0 border-t border-stone-100 dark:border-stonebg-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i>90% Faster Deployment</span>
-            <a href="https://github.com/tuncayyaylali/lakehouse" target="_blank" rel="noopener noreferrer" class="font-mono text-amber-500 hover:underline">Repo Link &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Project 2: Unity Catalog & Governance Stack -->
-        <div class="project-card glass-card rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border overflow-hidden flex flex-col justify-between" data-category="lakehouse">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">Data Governance</span>
-              <a href="https://github.com/tuncayyaylali/UnityCatalog" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-amber-500 transition-colors" title="View on GitHub">
-                <i class="fa-brands fa-github text-xl"></i>
-              </a>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Unity Catalog Governance on K8s</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed"
-               data-en="Complete multi-engine unified data catalog and security layer deployed on Kubernetes. Integrated MinIO S3 storage, Keycloak OIDC authentication, PostgreSQL metadata backend, and Trino query engine for secure Delta Lake analytics."
-               data-tr="Kubernetes üzerinde çoklu sorgu motoru destekli birleşik veri kataloğu ve güvenlik katmanı. MinIO S3, Keycloak OIDC kimlik doğrulama, PostgreSQL ve Trino ile uçtan uca Delta Lake veri yönetişimi.">
-              Complete multi-engine unified data catalog and security layer deployed on Kubernetes with Keycloak OIDC and Trino.
-            </p>
-            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Unity Catalog</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">MinIO</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Keycloak</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Trino</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Delta Lake</span>
-            </div>
-          </div>
-          <div class="p-6 pt-0 border-t border-stone-100 dark:border-stonebg-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-shield-halved mr-1"></i>OIDC & Role-Based Access</span>
-            <a href="https://github.com/tuncayyaylali/UnityCatalog" target="_blank" rel="noopener noreferrer" class="font-mono text-amber-500 hover:underline">Repo Link &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Project 3: E-Scooter ELT & Missing Data Recovery -->
-        <div class="project-card glass-card rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border overflow-hidden flex flex-col justify-between" data-category="etl">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">Cloud Warehouse ELT</span>
-              <span class="text-xs font-mono text-stone-400">Fleet Analytics</span>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white">E-Scooter Fleet Data Recovery & ELT</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed"
-               data-en="Supported ETL pipelines for one of Turkey's largest micro-mobility companies. Identified and resolved telemetry discrepancies across AWS S3, dbt Cloud, Snowflake, and BigQuery, successfully recovering 17 days of lost trip telemetry and achieving 100% reporting accuracy."
-               data-tr="Türkiye'nin en büyük elektrikli scooter şirketlerinden biri için ETL süreçleri yönetildi. AWS S3, dbt Cloud, Snowflake ve BigQuery arasındaki veri uyumsuzlukları giderilerek 17 günlük kayıp telemetri verisi kurtarıldı ve raporlama doğruluğu %100'e çıkarıldı.">
-              Supported ETL pipelines across AWS S3, dbt Cloud, Snowflake, and BigQuery, recovering 17 days of missing critical data.
-            </p>
-            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">AWS S3</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Snowflake</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">dbt Cloud</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Google BigQuery</span>
-            </div>
-          </div>
-          <div class="p-6 pt-0 border-t border-stone-100 dark:border-stonebg-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-check-double mr-1"></i>100% Reporting Accuracy</span>
-            <span class="font-mono text-stone-400">Production</span>
-          </div>
-        </div>
-
-        <!-- Project 4: Airflow MongoDB to BigQuery Normalization -->
-        <div class="project-card glass-card rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border overflow-hidden flex flex-col justify-between" data-category="etl">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">Query Optimization</span>
-              <span class="text-xs font-mono text-stone-400">Apache Airflow</span>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white">MongoDB Nested Data Flattening to BigQuery</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed"
-               data-en="Designed an automated Apache Airflow DAG that flattened deeply nested NoSQL JSON documents from MongoDB and loaded them into structured BigQuery tables. Decreased analytical query execution times by 50% for executive dashboards."
-               data-tr="MongoDB'deki derin iç içe geçmiş NoSQL JSON veri yapılarını düzleştirip (flattening) BigQuery'ye aktaran Apache Airflow iş akışı. İş zekası ve gösterge panellerinin sorgu çalışma sürelerini %50 kısalttı.">
-              Flattened complex nested NoSQL data structures from MongoDB to BigQuery using Airflow, slashing query latency by 50%.
-            </p>
-            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">MinIO (S3)</span>
               <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Apache Airflow</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">MongoDB</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Google BigQuery</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Python</span>
+              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">dbt</span>
+              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Keycloak (IAM/SSO)</span>
+              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">DBeaver</span>
             </div>
           </div>
           <div class="p-6 pt-0 border-t border-stone-100 dark:border-stonebg-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-gauge-high mr-1"></i>50% Faster Query Speed</span>
-            <span class="font-mono text-stone-400">Airflow DAG</span>
-          </div>
-        </div>
-
-        <!-- Project 5: Practicus AI Platform Deployment -->
-        <div class="project-card glass-card rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border overflow-hidden flex flex-col justify-between" data-category="lakehouse observability">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">AI Platform Engineering</span>
-              <span class="text-xs font-mono text-stone-400">OpenShift & Cloud</span>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Practicus AI Platform Deployment</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed"
-               data-en="Contributed to the multi-environment deployment of the Practicus AI Data Intelligence Platform across on-premise OpenShift clusters and major cloud vendors. Implemented centralized Prometheus, Grafana, and Fluentd monitoring stacks."
-               data-tr="Practicus AI Veri Zekası Platformunun şirket içi OpenShift kümeleri ve büyük bulut sağlayıcıları üzerinde kurulum ve yapılandırması. Prometheus, Grafana ve Fluentd ile merkezi izleme ve loglama mimarisi.">
-              Multi-environment deployment of the Practicus AI Data Intelligence Platform across OpenShift and major cloud vendors with observability.
-            </p>
-            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">OpenShift</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">AWS / GCP</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Prometheus</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Grafana</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Fluentd</span>
-            </div>
-          </div>
-          <div class="p-6 pt-0 border-t border-stone-100 dark:border-stonebg-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-heart-pulse mr-1"></i>Full-Stack Observability</span>
-            <span class="font-mono text-stone-400">Enterprise AI</span>
-          </div>
-        </div>
-
-        <!-- Project 6: Enterprise Identity & Observability GitOps -->
-        <div class="project-card glass-card rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border overflow-hidden flex flex-col justify-between" data-category="observability">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-md bg-stone-100 dark:bg-stonebg-border text-amber-600 dark:text-amber-400 text-xs font-mono font-bold">Security & Identity</span>
-              <div class="flex gap-2">
-                <a href="https://github.com/tuncayyaylali/grafana_with_ldap" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-amber-500 transition-colors" title="Grafana LDAP Repo">
-                  <i class="fa-brands fa-github text-lg"></i>
-                </a>
-                <a href="https://github.com/tuncayyaylali/superset_with_keycloak_and_ldap" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-amber-500 transition-colors" title="Superset Keycloak Repo">
-                  <i class="fa-brands fa-github text-lg"></i>
-                </a>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white">Enterprise Identity for Superset & Grafana</h3>
-            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed"
-               data-en="Production-ready Kubernetes configurations integrating OpenLDAP, phpLDAPadmin, and Keycloak for centralized authentication and fine-grained RBAC across Apache Superset and Grafana dashboards."
-               data-tr="Apache Superset ve Grafana panellerinde OpenLDAP, phpLDAPadmin ve Keycloak ile merkezi kimlik doğrulama ve detaylı rol tabanlı yetkilendirme (RBAC) sağlayan Kubernetes altyapıları.">
-              Production Kubernetes setups integrating OpenLDAP, phpLDAPadmin, and Keycloak for SSO and RBAC across Superset and Grafana.
-            </p>
-            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-xs">
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">OpenLDAP</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Keycloak</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Apache Superset</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">Grafana</span>
-              <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-stonebg-border text-stone-700 dark:text-stone-300">NetworkPolicy</span>
-            </div>
-          </div>
-          <div class="p-6 pt-0 border-t border-stone-100 dark:border-stonebg-border mt-4 flex items-center justify-between text-xs">
-            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-lock mr-1"></i>SSO & RBAC Automated</span>
-            <span class="font-mono text-stone-400">GitOps Ready</span>
+            <span class="text-amber-600 dark:text-amber-400 font-medium"><i class="fa-solid fa-layer-group mr-1"></i>End-to-End Lakehouse</span>
+            <a href="https://github.com/tuncayyaylali/lakehouse.git" target="_blank" rel="noopener noreferrer" class="font-mono text-amber-500 hover:underline">Repo Link &rarr;</a>
           </div>
         </div>
 

@@ -76,3 +76,4 @@ git push -u origin main
 Eğer ileride kendi alan adınızı kullanmak isterseniz hiçbir ücret ödemeden:
 1. Deponuzun kök dizinine `CNAME` adında bir dosya oluşturup içine `www.tuncayyaylali.com` yazmanız,
 2. Alan adı sağlayıcınızdan (Domain Registrar) DNS CNAME kaydını `tuncayyaylali.github.io` adresine yönlendirmeniz yeterlidir.
+

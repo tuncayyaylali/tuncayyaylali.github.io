@@ -139,3 +139,4 @@ html:not(.dark) ::-webkit-scrollbar-thumb:hover {
 #copy-toast {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
+

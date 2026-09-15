@@ -24,31 +24,18 @@
       theme: {
         extend: {
           colors: {
-            amber: {
-              50: '#FDF8F5',
-              100: '#FBECE4',
-              200: '#F6D6C4',
-              300: '#EEB79C',
-              400: '#DD8458', // Burnished copper text accent in dark mode
-              500: '#C05621', // Industrial Bronze / Copper Primary (#C05621)
-              600: '#A84417', // Deep rich copper (light mode contrast & button baseline)
-              700: '#8A340E', // Darker bronze hover
-              800: '#6C280B',
-              900: '#4D1D08',
-              950: '#2E1004',
-            },
             brand: {
-              DEFAULT: '#C05621',
-              hover: '#A84417',
-              light: '#DD8458',
-              pastel: '#EEB79C'
+              DEFAULT: '#d97706',
+              hover: '#b45309',
+              light: '#f59e0b',
+              pastel: '#fbbf24'
             },
             stonebg: {
-              dark: '#0B0D13',
-              card: '#131620',
-              cardhover: '#1B1F2D',
-              border: 'rgba(255, 255, 255, 0.08)',
-              borderlight: 'rgba(255, 255, 255, 0.14)'
+              dark: '#0F1117',
+              card: '#181B22',
+              cardhover: '#20242E',
+              border: '#262A35',
+              borderlight: '#363B4A'
             }
           }
         }
@@ -76,7 +63,7 @@
       
       <!-- Brand / Logo -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 shadow-[0_2px_12px_rgba(192,86,33,0.35)] flex items-center justify-center text-white font-mono font-bold text-base transition-all group-hover:scale-105">
+        <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-mono font-bold text-base shadow-sm group-hover:bg-amber-500 transition-all">
           TY
         </div>
         <div>
@@ -110,7 +97,7 @@
         </button>
 
         <!-- Resume Download -->
-        <a href="assets/docs/Tuncay_Yaylali_CV.pdf" download="Tuncay_Yaylali_CV.pdf" class="btn-bronze-primary inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all">
+        <a href="assets/docs/Tuncay_Yaylali_CV.pdf" download="Tuncay_Yaylali_CV.pdf" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm transition-all">
           <i class="fa-solid fa-file-arrow-down"></i>
           <span data-en="CV PDF" data-tr="CV İndir">CV PDF</span>
         </a>
@@ -141,7 +128,7 @@
       <a href="#writing" class="mobile-nav-link block text-base font-medium text-stone-700 dark:text-stone-200 hover:text-amber-500" data-en="Articles" data-tr="Yazılar">Articles</a>
       <a href="#contact" class="mobile-nav-link block text-base font-medium text-stone-700 dark:text-stone-200 hover:text-amber-500" data-en="Contact" data-tr="İletişim">Contact</a>
       <div class="pt-3 border-t border-stone-200 dark:border-stonebg-border">
-        <a href="assets/docs/Tuncay_Yaylali_CV.pdf" download="Tuncay_Yaylali_CV.pdf" class="btn-bronze-primary w-full text-center flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium">
+        <a href="assets/docs/Tuncay_Yaylali_CV.pdf" download="Tuncay_Yaylali_CV.pdf" class="w-full text-center flex items-center justify-center gap-2 bg-amber-600 text-white px-4 py-2.5 rounded-lg text-sm font-medium">
           <i class="fa-solid fa-file-arrow-down"></i>
           <span data-en="Download Resume (PDF)" data-tr="Özgeçmiş İndir (PDF)">Download Resume (PDF)</span>
         </a>
@@ -190,7 +177,7 @@
 
           <!-- CTAs & Social Links -->
           <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-            <a href="#projects" class="btn-bronze-primary px-6 py-3 rounded-xl font-semibold text-sm transition-all flex items-center gap-2">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm shadow-sm transition-all flex items-center gap-2">
               <i class="fa-solid fa-layer-group"></i>
               <span data-en="Explore Projects" data-tr="Projeleri İncele">Explore Projects</span>
             </a>
@@ -218,7 +205,7 @@
 
         <!-- Right: Clean Portrait -->
         <div class="lg:col-span-4 flex justify-center">
-          <div class="stat-card relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden p-2">
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border border-stone-200 dark:border-stonebg-border bg-white dark:bg-stonebg-card shadow-lg p-2">
             <img src="assets/images/profile.jpg" alt="Tuncay Yaylalı" 
                  onerror="this.onerror=null; this.src='https://github.com/tuncayyaylali.png';"
                  class="w-full h-full object-cover rounded-xl">
@@ -227,21 +214,21 @@
 
       </div>
 
-      <!-- Metrics Counter Strip (Industrial Bronze Accent & Layered Depth) -->
+      <!-- Metrics Counter Strip (Warm Accent) -->
       <div class="mt-16 pt-10 border-t border-stone-200 dark:border-stonebg-border grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="stat-card p-5 rounded-2xl text-center">
+        <div class="p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border text-center">
           <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400">25+</div>
           <div class="text-xs sm:text-sm font-medium text-stone-500 dark:text-stone-400 mt-1" data-en="Years of Engineering Rigor" data-tr="Yıllık Mühendislik Disiplini">Years of Engineering Rigor</div>
         </div>
-        <div class="stat-card p-5 rounded-2xl text-center">
+        <div class="p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border text-center">
           <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400">2x</div>
           <div class="text-xs sm:text-sm font-medium text-stone-500 dark:text-stone-400 mt-1" data-en="AWS & Snowflake Certifications" data-tr="AWS & Snowflake Sertifikaları">AWS & Snowflake Certifications</div>
         </div>
-        <div class="stat-card p-5 rounded-2xl text-center">
+        <div class="p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border text-center">
           <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400">20+</div>
           <div class="text-xs sm:text-sm font-medium text-stone-500 dark:text-stone-400 mt-1" data-en="Open-Source Tools Integrated" data-tr="Açık Kaynak Araç Entegrasyonu">Open-Source Tools Integrated</div>
         </div>
-        <div class="stat-card p-5 rounded-2xl text-center">
+        <div class="p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border text-center">
           <div class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400">100+</div>
           <div class="text-xs sm:text-sm font-medium text-stone-500 dark:text-stone-400 mt-1" data-en="Bootcamp Students Mentored" data-tr="Mentorluk Verilen Öğrenci">Bootcamp Students Mentored</div>
         </div>
@@ -261,27 +248,27 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-white" data-en="Engineering at Scale: From Environmental Engineering to Big Data" data-tr="Ölçeklenebilir Mühendislik: Çevre Mühendisliği'nden Büyük Veriye">
           Ölçeklenebilir Mühendislik: Çevre Mühendisliği'nden Büyük Veriye
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 mx-auto rounded-full shadow-[0_0_10px_rgba(192,86,33,0.3)]"></div>
+        <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
       </div>
 
       <div class="max-w-4xl mx-auto space-y-6">
         
         <!-- Story Card -->
-        <div class="layered-card p-6 sm:p-8 rounded-2xl space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-lg">
-              <i class="fa-solid fa-code-branch"></i>
+          <div class="p-6 sm:p-8 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-lg">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <h3 class="text-xl font-bold text-stone-900 dark:text-white" data-en="The Unique Engineering Journey" data-tr="Benzersiz Mühendislik Yolculuğu">The Unique Engineering Journey</h3>
             </div>
-            <h3 class="text-xl font-bold text-stone-900 dark:text-white" data-en="The Unique Engineering Journey" data-tr="Benzersiz Mühendislik Yolculuğu">The Unique Engineering Journey</h3>
+            <p class="text-stone-600 dark:text-stone-300 leading-relaxed text-sm sm:text-base"
+               data-en="For over 25 years, I have developed and managed complex environmental impact assessment projects, numerical pollution modeling (ISCST, ISCLT, AERMOD), spatial data analyses, and infrastructure projects for both the public and private sectors, including BIST500 companies. Additionally, during my tenure at the Ministry of Environment and Forestry, I designed and built Turkey's first relational database for Endemic Plant Species and led the architecture of the official website for the General Directorate of Nature Conservation and National Parks. In 2022, driven by my passion for technology, I transitioned into the IT sector as a Data Engineer following an intensive academic and practical transformation process in Machine Learning, MLOps Engineering, and Data Engineering. Leveraging my decades of project management experience, analytical background, and database expertise, I have been designing and implementing end-to-end batch and streaming ETL/ELT data pipelines in Kubernetes and Cloud-Native ecosystems since 2022."
+               data-tr="25 yılı aşkın süre boyunca BIST500 şirketleri de dahil olmak üzere kamu ve özel sektör için karmaşık çevresel etki değerlendirme projeleri, sayısal çevre kirlilik modellemeleri (ISCST, ISCLT, AERMOD), mekânsal veri analizleri ve altyapı projeleri geliştirdim ve yönettim. Ayrıca Çevre ve Orman Bakanlığı’ndaki görevim esnasında Türkiye'nin Endemik Bitki Türleri için ilk ilişkisel veri tabanını tasarlayıp inşa ettim ve Doğa Koruma ve Milli Parklar Genel Müdürlüğü’nün resmi internet sitesinin mimarisini üstlendim. 2022 yılında, teknolojiye olan tutkumla birlikte Makine Öğrenmesi, MLOps Mühendisliği ve Veri Mühendisliği alanlarında yoğun bir akademik ve pratik dönüşüm süreci tamamlayarak BT sektörüne adım attım. Uzun yıllara dayanan proje yönetim tecrübem, analitik altyapım ve veri tabanı birikimim sayesinde; 2022’den bu yana Kubernetes ve Cloud-Native ekosistemlerde, hem batch hem de streaming tabanlı uçtan uca ETL/ELT veri akışları tasarlıyor ve hayata geçiriyorum.">              
+            </p>            
           </div>
-          <p class="text-stone-600 dark:text-stone-300 leading-relaxed text-sm sm:text-base"
-             data-en="For over 25 years, I have developed and managed complex environmental impact assessment projects, numerical pollution modeling (ISCST, ISCLT, AERMOD), spatial data analyses, and infrastructure projects for both the public and private sectors, including BIST500 companies. Additionally, during my tenure at the Ministry of Environment and Forestry, I designed and built Turkey's first relational database for Endemic Plant Species and led the architecture of the official website for the General Directorate of Nature Conservation and National Parks. In 2022, driven by my passion for technology, I transitioned into the IT sector as a Data Engineer following an intensive academic and practical transformation process in Machine Learning, MLOps Engineering, and Data Engineering. Leveraging my decades of project management experience, analytical background, and database expertise, I have been designing and implementing end-to-end batch and streaming ETL/ELT data pipelines in Kubernetes and Cloud-Native ecosystems since 2022."
-             data-tr="25 yılı aşkın süre boyunca BIST500 şirketleri de dahil olmak üzere kamu ve özel sektör için karmaşık çevresel etki değerlendirme projeleri, sayısal çevre kirlilik modellemeleri (ISCST, ISCLT, AERMOD), mekânsal veri analizleri ve altyapı projeleri geliştirdim ve yönettim. Ayrıca Çevre ve Orman Bakanlığı’ndaki görevim esnasında Türkiye'nin Endemik Bitki Türleri için ilk ilişkisel veri tabanını tasarlayıp inşa ettim ve Doğa Koruma ve Milli Parklar Genel Müdürlüğü’nün resmi internet sitesinin mimarisini üstlendim. 2022 yılında, teknolojiye olan tutkumla birlikte Makine Öğrenmesi, MLOps Mühendisliği ve Veri Mühendisliği alanlarında yoğun bir akademik ve pratik dönüşüm süreci tamamlayarak BT sektörüne adım attım. Uzun yıllara dayanan proje yönetim tecrübem, analitik altyapım ve veri tabanı birikimim sayesinde; 2022’den bu yana Kubernetes ve Cloud-Native ekosistemlerde, hem batch hem de streaming tabanlı uçtan uca ETL/ELT veri akışları tasarlıyor ve hayata geçiriyorum.">              
-          </p>            
-        </div>
 
         <!-- Academic Foundation (5 Degrees) -->
-        <div class="layered-card p-6 sm:p-8 rounded-2xl">
+        <div class="p-6 sm:p-8 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border">
           <h4 class="text-base font-bold text-stone-900 dark:text-white mb-4 flex items-center gap-2">
             <i class="fa-solid fa-graduation-cap text-amber-500"></i>
             <span data-en="Education" data-tr="Eğitim">Eğitim</span>
@@ -331,12 +318,12 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-white" data-en="Experience & Track Record" data-tr="İş Deneyimi & Başarılar">
           Experience & Track Record
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 mx-auto rounded-full shadow-[0_0_10px_rgba(192,86,33,0.3)]"></div>
+        <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
       </div>
 
       <!-- Sector Switcher Tabs -->
       <div class="flex justify-center mb-12">
-        <div class="inline-flex p-1.5 rounded-2xl bg-stone-200/80 dark:bg-stonebg-card/90 border border-stone-300 dark:border-white/10 shadow-inner">
+        <div class="inline-flex p-1.5 rounded-2xl bg-stone-200/80 dark:bg-stonebg-card border border-stone-300 dark:border-stonebg-border">
           <button class="exp-tab-btn px-6 py-2.5 rounded-xl font-mono text-xs sm:text-sm active" data-target="it">
             <i class="fa-solid fa-server mr-2"></i>
             <span data-en="Data Engineering (2022 - Present)" data-tr="Veri Mühendisliği (2022 - Günümüz)">Veri Mühendisliği (2022 - Günümüz)</span>
@@ -362,7 +349,7 @@
             <p class="text-sm font-semibold text-stone-500 dark:text-stone-400" data-en="Data Engineer &bull; Ankara (Remote)" data-tr="Veri Mühendisi &bull; Ankara (Uzaktan)">Veri Mühendisi &bull; Ankara (Uzaktan)</p>
           </div>
           <div class="w-full sm:w-1/2 sm:pl-12 pl-12 mt-2 sm:mt-0">
-            <div class="layered-card p-6 sm:p-7 rounded-2xl space-y-2">
+            <div class="p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border space-y-2">
               <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-stone-600 dark:text-stone-300">
                 <li data-en="Contributed to the successful deployment and configuration of the Practicus AI Data Intelligence Platform across various environments, including on-premise OpenShift clusters and major cloud vendors."
                     data-tr="Practicus AI Data Intelligence Platform'un, şirket içi OpenShift cluster'ları ve büyük bulut sağlayıcıları dahil olmak üzere çeşitli ortamlarda başarılı bir şekilde devreye alınmasına ve yapılandırılmasına katkıda bulundum.">
@@ -395,7 +382,7 @@
             <i class="fa-solid fa-network-wired text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0 sm:order-1">
-            <div class="layered-card p-6 sm:p-7 rounded-2xl space-y-2 text-left">
+            <div class="p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border space-y-2 text-left">
               <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-stone-600 dark:text-stone-300">
                 <li data-en="Managed deployment, configuration, and monitoring of Rancher RKE2 Kubernetes clusters for a major telecom company, contributing to a Proof of Concept (PoC) project that achieved an 85% success rate. In this scope;"
                     data-tr="Büyük bir telekomünikasyon şirketi için Rancher RKE2 Kubernetes cluster'larının deployment (dağıtım), konfigürasyon ve monitoring (izleme) süreçlerini yönettim; %85 başarı oranına ulaşan bir Proof of Concept (PoC) projesine katkıda bulundum. Bu kapsamda;">
@@ -470,7 +457,7 @@
             <p class="text-sm font-semibold text-stone-500 dark:text-stone-400" data-en="Data Engineer &bull; Istanbul (Remote)" data-tr="Veri Mühendisi &bull; İstanbul (Uzaktan)">Veri Mühendisi &bull; İstanbul (Uzaktan)</p>
           </div>
           <div class="w-full sm:w-1/2 sm:pl-12 pl-12 mt-2 sm:mt-0">
-            <div class="layered-card p-6 sm:p-7 rounded-2xl space-y-2">
+            <div class="p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border space-y-2">
               <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-stone-600 dark:text-stone-300">
                 <li data-en="Utilized Agile methodologies to deliver data engineering solutions, completing 20 tasks across 4 sprints with a 95% on-time delivery rate."
                     data-tr="Agile metodolojiler ile veri mühendisliği konusunda çözümler ürettim; 4 sprint boyunca 20 görevi %95 zamanında teslim oranıyla tamamladım.">
@@ -491,7 +478,7 @@
             <i class="fa-solid fa-laptop-code text-sm"></i>
           </div>
           <div class="w-full sm:w-1/2 sm:pr-12 sm:text-right pl-12 sm:pl-0 sm:order-1">
-            <div class="layered-card p-6 sm:p-7 rounded-2xl space-y-2 text-left">
+            <div class="p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border space-y-2 text-left">
               <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-stone-600 dark:text-stone-300">
                 <li data-en="As an outsourced data engineer, provided customized data engineering solutions to clients, effectively addressing their specific needs and challenges."
                     data-tr="Outsource veri mühendisi olarak, müşterilerin özel ihtiyaçlarını ve zorluklarını etkin bir şekilde ele alarak onlara özelleştirilmiş veri mühendisliği çözümleri sağladım.">
@@ -521,7 +508,7 @@
       <div id="env-experience" class="hidden max-w-4xl mx-auto space-y-4">
         
         <!-- Role 1: Savra -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-mountain"></i>
@@ -543,7 +530,7 @@
         </div>
 
         <!-- Role 2: Hidromark -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-water"></i>
@@ -565,7 +552,7 @@
         </div>
 
         <!-- Role 3: MGS Proje -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-recycle"></i>
@@ -587,7 +574,7 @@
         </div>
 
         <!-- Role 4: Duru Çevre -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-flask-vial"></i>
@@ -609,7 +596,7 @@
         </div>
 
         <!-- Role 5: Serdar Mühendislik -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-smog"></i>
@@ -631,7 +618,7 @@
         </div>
 
         <!-- Role 6: Atak Seyahat -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-calendar-check"></i>
@@ -653,7 +640,7 @@
         </div>
 
         <!-- Role 7: T.C. Çevre ve Orman Bakanlığı -->
-        <div class="layered-card p-5 sm:p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 shadow-sm hover:border-amber-500/40 transition-all">
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
               <i class="fa-solid fa-landmark"></i>
@@ -690,12 +677,12 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-white" data-en="Projects" data-tr="Projeler">
           Projeler
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 mx-auto rounded-full shadow-[0_0_10px_rgba(192,86,33,0.3)]"></div>
+        <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
       </div>
 
       <!-- Filter Buttons -->
       <div class="flex justify-center mb-12">
-        <div class="inline-flex flex-wrap items-center justify-center p-1.5 rounded-2xl bg-stone-200/80 dark:bg-stonebg-card/90 border border-stone-300 dark:border-white/10 shadow-inner">
+        <div class="inline-flex flex-wrap items-center justify-center p-1.5 rounded-2xl bg-stone-200/80 dark:bg-stonebg-card border border-stone-300 dark:border-stonebg-border">
           <button class="project-filter-btn px-5 py-2.5 rounded-xl font-mono text-xs sm:text-sm active" data-filter="all">All Projects</button>
           <button class="project-filter-btn px-5 py-2.5 rounded-xl font-mono text-xs sm:text-sm" data-filter="lakehouse">Lakehouse &amp; K8s</button>
           <button class="project-filter-btn px-5 py-2.5 rounded-xl font-mono text-xs sm:text-sm" data-filter="etl">Pipelines &amp; ELT</button>
@@ -979,14 +966,14 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-white" data-en="Certifications & Bootcamps" data-tr="Sertifikalar & Kamplar">
           Certifications & Bootcamps
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 mx-auto rounded-full shadow-[0_0_10px_rgba(192,86,33,0.3)]"></div>
+        <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
       </div>
 
-      <!-- Primary Certifications (Industrial Bronze & Layered Cards) -->
+      <!-- Primary Certifications (Warm Minimalist Uniform Style) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         
         <!-- AWS Certificate -->
-        <div class="layered-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
           <div>
             <div class="flex items-center justify-between gap-4 mb-4">
               <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl flex-shrink-0">
@@ -1011,7 +998,7 @@
         </div>
 
         <!-- Snowflake Certificate -->
-        <div class="layered-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
           <div>
             <div class="flex items-center justify-between gap-4 mb-4">
               <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl flex-shrink-0">
@@ -1036,7 +1023,7 @@
         </div>
 
         <!-- Kubernetes Bootcamp -->
-        <div class="layered-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between md:col-span-2 lg:col-span-1">
+        <div class="p-6 sm:p-7 rounded-3xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
           <div>
             <div class="flex items-center justify-between gap-4 mb-4">
               <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-3xl flex-shrink-0">
@@ -1064,22 +1051,22 @@
 
       <!-- Bootcamps Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="layered-card p-5 rounded-2xl">
+        <div class="p-5 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border">
           <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold">10.2023 – 07.2024</span>
           <h4 class="font-bold text-stone-900 dark:text-white text-sm mt-1">Cloud Engineer Bootcamp</h4>
           <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">Istanbul Data Science Academy</p>
         </div>
-        <div class="layered-card p-5 rounded-2xl">
+        <div class="p-5 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border">
           <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold">10.2021 – 03.2022</span>
           <h4 class="font-bold text-stone-900 dark:text-white text-sm mt-1">Data Science Specialization (Data MasTR)</h4>
           <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">Advancity &amp; Miuul (in coop. with Enocta)</p>
         </div>
-        <div class="layered-card p-5 rounded-2xl">
+        <div class="p-5 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border">
           <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold">04.2022 – 09.2022</span>
           <h4 class="font-bold text-stone-900 dark:text-white text-sm mt-1">Data Engineer Path</h4>
           <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">Miuul</p>
         </div>
-        <div class="layered-card p-5 rounded-2xl">
+        <div class="p-5 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border">
           <span class="text-xs font-mono text-amber-600 dark:text-amber-400 font-bold">02.2022 – 06.2022</span>
           <h4 class="font-bold text-stone-900 dark:text-white text-sm mt-1">MLOps Bootcamp</h4>
           <p class="text-xs text-stone-500 dark:text-stone-400 mt-0.5">Veri Bilimi Okulu (VBO)</p>
@@ -1087,7 +1074,7 @@
       </div>
 
       <!-- LinkedIn Certifications Overview Note -->
-      <div class="layered-card mt-8 max-w-3xl mx-auto p-4 sm:p-5 rounded-2xl flex items-center justify-center gap-3.5">
+      <div class="mt-8 max-w-3xl mx-auto p-4 sm:p-5 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border flex items-center justify-center gap-3.5 shadow-sm">
         <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-xl">
           <i class="fa-brands fa-linkedin"></i>
         </div>
@@ -1114,7 +1101,7 @@
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-white" data-en="Writing on Medium & Community Sharing" data-tr="Medium Yazıları & Topluluk Paylaşımları">
           Writing on Medium &amp; Community Sharing
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-amber-600 via-amber-400 to-amber-600 mx-auto rounded-full shadow-[0_0_10px_rgba(192,86,33,0.3)]"></div>
+        <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
         <p class="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed max-w-2xl mx-auto pt-2"
            data-en="I actively publish in-depth articles on Medium breaking down complex data engineering topics, cloud architectures, and open-source practices into accessible narratives."
            data-tr="Medium'da veri mühendisliği, bulut mimarileri ve açık kaynak sistemler üzerine derinlemesine teknik makaleler kaleme alıyorum. Karmaşık mimarileri anlaşılır kılmayı ve toplulukla paylaşmayı seviyorum.">
@@ -1141,7 +1128,7 @@
               <a href="https://medium.com/@tuncayyaylali/automating-email-processing-and-sentiment-analysis-with-rabbitmq-ollama-and-gmail-api-3ad6b6ee4015?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1164,7 +1151,7 @@
               <a href="https://medium.com/@tuncayyaylali/%EF%B8%8F-official-gazette-ai-tracker-compliance-audit-system-c52c4a7d1921?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1187,7 +1174,7 @@
               <a href="https://medium.com/@tuncayyaylali/modern-open-source-lakehouse-platform-on-kubernetes-82435895dd19?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1210,7 +1197,7 @@
               <a href="https://medium.com/@tuncayyaylali/dailyops-%C3%A7evre-denetim-y%C3%B6netmeli%C4%9Fi-ayl%C4%B1k-denetleme-tutana%C4%9F%C4%B1-rag-otomasyonu-37b4ea5d5b14?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1233,7 +1220,7 @@
               <a href="https://medium.com/@tuncayyaylali/kubernetes-%C3%BCzerinde-redpanda-2e618fec24d8?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1256,7 +1243,7 @@
               <a href="https://medium.com/@tuncayyaylali/snowflake-deneme-hesab%C4%B1-a%C3%A7ma-external-stage-ile-yerelden-dosya-y%C3%BCkleme-ve-snowpark-ile-i%CC%87%C5%9Fleme-1af58e41ac3c?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1279,7 +1266,7 @@
               <a href="https://medium.com/@tuncayyaylali/kubernetes-te-nodeaffinity-podaffinity-taint-ve-toleration-kavramlar%C4%B1-1e90a49ab730?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1302,7 +1289,7 @@
               <a href="https://medium.com/@tuncayyaylali/veri-bilimi-yolculu%C4%9Fum-7afb45e3847b?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1325,7 +1312,7 @@
               <a href="https://medium.com/@tuncayyaylali/enterprise-bi-platform-apache-superset-with-keycloak-and-openldap-efcf7a4cfeed?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1348,7 +1335,7 @@
               <a href="https://medium.com/@tuncayyaylali/modern-open-source-data-lakehouse-data-federation-2f7688d17998?sharedUserId=tuncayyaylali" 
                  target="_blank" 
                  rel="noopener noreferrer" 
-                 class="layered-card group p-4 rounded-2xl flex items-center justify-between gap-4 transition-all">
+                 class="group p-4 rounded-2xl bg-white dark:bg-stonebg-card border border-stone-200 dark:border-stonebg-border hover:border-amber-500/50 dark:hover:border-amber-500/50 flex items-center justify-between gap-4 transition-all shadow-sm hover:shadow-md">
                 <div class="flex items-center gap-3.5 min-w-0">
                   <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-lg group-hover:scale-105 transition-transform">
                     <i class="fa-brands fa-medium"></i>
@@ -1378,78 +1365,78 @@
   <section id="contact" class="py-20 border-t border-stone-200 dark:border-stonebg-border bg-white dark:bg-stonebg-dark relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="layered-card p-8 sm:p-12 rounded-3xl relative overflow-hidden max-w-2xl mx-auto shadow-2xl">
+      <div class="p-8 sm:p-12 rounded-3xl bg-stonebg-card border border-stonebg-border shadow-xl relative overflow-hidden max-w-2xl mx-auto">
         
         <div class="relative z-10 space-y-6">
           
           <div class="text-center space-y-2">
-            <span class="px-3 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 font-mono text-xs font-bold uppercase tracking-wider" data-en="Let's Connect" data-tr="İletişime Geçin">Let's Connect</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-stone-900 dark:text-white" data-en="Contact" data-tr="İletişim">
+            <span class="px-3 py-1 rounded-md bg-stonebg-dark text-amber-400 font-mono text-xs font-bold uppercase tracking-wider" data-en="Let's Connect" data-tr="İletişime Geçin">Let's Connect</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white" data-en="Contact" data-tr="İletişim">
               Contact
             </h2>
           </div>
 
           <div class="flex flex-col gap-3">
             <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/tuncayyaylali/" target="_blank" rel="noopener noreferrer" class="layered-card p-4 rounded-xl text-stone-900 dark:text-white flex items-center justify-between transition-all group">
+            <a href="https://linkedin.com/in/tuncayyaylali/" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-stonebg-dark/80 hover:bg-stonebg-dark border border-stonebg-border text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
-                <i class="fa-brands fa-linkedin text-2xl text-amber-600 dark:text-amber-400"></i>
+                <i class="fa-brands fa-linkedin text-2xl text-amber-400"></i>
                 <div>
                   <div class="font-bold text-sm">LinkedIn</div>
-                  <div class="text-xs text-stone-500 dark:text-stone-400 font-mono">/in/tuncayyaylali</div>
+                  <div class="text-xs text-stone-400 font-mono">/in/tuncayyaylali</div>
                 </div>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-amber-600 dark:group-hover:text-white transition-colors"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-white transition-colors"></i>
             </a>
 
             <!-- GitHub -->
-            <a href="https://github.com/tuncayyaylali" target="_blank" rel="noopener noreferrer" class="layered-card p-4 rounded-xl text-stone-900 dark:text-white flex items-center justify-between transition-all group">
+            <a href="https://github.com/tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-stonebg-dark/80 hover:bg-stonebg-dark border border-stonebg-border text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
-                <i class="fa-brands fa-github text-2xl text-stone-700 dark:text-stone-200"></i>
+                <i class="fa-brands fa-github text-2xl text-stone-200"></i>
                 <div>
                   <div class="font-bold text-sm">GitHub</div>
-                  <div class="text-xs text-stone-500 dark:text-stone-400 font-mono">@tuncayyaylali</div>
+                  <div class="text-xs text-stone-400 font-mono">@tuncayyaylali</div>
                 </div>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-amber-600 dark:group-hover:text-white transition-colors"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-white transition-colors"></i>
             </a>
 
             <!-- Medium -->
-            <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="layered-card p-4 rounded-xl text-stone-900 dark:text-white flex items-center justify-between transition-all group">
+            <a href="https://medium.com/@tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-stonebg-dark/80 hover:bg-stonebg-dark border border-stonebg-border text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
-                <i class="fa-brands fa-medium text-2xl text-stone-700 dark:text-stone-200"></i>
+                <i class="fa-brands fa-medium text-2xl text-stone-200"></i>
                 <div>
                   <div class="font-bold text-sm">Medium</div>
-                  <div class="text-xs text-stone-500 dark:text-stone-400 font-mono">@tuncayyaylali</div>
+                  <div class="text-xs text-stone-400 font-mono">@tuncayyaylali</div>
                 </div>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-amber-600 dark:group-hover:text-white transition-colors"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-white transition-colors"></i>
             </a>
 
             <!-- X (Twitter) -->
-            <a href="https://x.com/tuncayyaylali" target="_blank" rel="noopener noreferrer" class="layered-card p-4 rounded-xl text-stone-900 dark:text-white flex items-center justify-between transition-all group">
+            <a href="https://x.com/tuncayyaylali" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl bg-stonebg-dark/80 hover:bg-stonebg-dark border border-stonebg-border text-white flex items-center justify-between transition-colors group">
               <div class="flex items-center gap-3">
-                <i class="fa-brands fa-x-twitter text-2xl text-stone-700 dark:text-stone-200"></i>
+                <i class="fa-brands fa-x-twitter text-2xl text-stone-200"></i>
                 <div>
                   <div class="font-bold text-sm">X (Twitter)</div>
-                  <div class="text-xs text-stone-500 dark:text-stone-400 font-mono">@tuncayyaylali</div>
+                  <div class="text-xs text-stone-400 font-mono">@tuncayyaylali</div>
                 </div>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-amber-600 dark:group-hover:text-white transition-colors"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 group-hover:text-white transition-colors"></i>
             </a>
 
             <!-- Email -->
-            <button class="copy-email-btn layered-card p-4 rounded-xl text-stone-900 dark:text-white flex items-center justify-between transition-all group text-left w-full cursor-pointer">
+            <button class="copy-email-btn p-4 rounded-xl bg-stonebg-dark/80 hover:bg-stonebg-dark border border-stonebg-border text-white flex items-center justify-between transition-colors group text-left w-full cursor-pointer">
               <div class="flex items-center gap-3">
-                <i class="fa-solid fa-envelope text-2xl text-amber-600 dark:text-amber-400"></i>
+                <i class="fa-solid fa-envelope text-2xl text-amber-400"></i>
                 <div>
                   <div class="font-bold text-sm" data-en="Email" data-tr="E-posta">Email</div>
-                  <div class="text-xs text-stone-500 dark:text-stone-400 font-mono">tuncayyaylali@gmail.com</div>
+                  <div class="text-xs text-stone-400 font-mono">tuncayyaylali@gmail.com</div>
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-xs font-mono text-stone-500 dark:text-stone-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors" data-en="Copy" data-tr="Kopyala">Copy</span>
-                <i class="fa-solid fa-copy text-xs text-stone-400 group-hover:text-stone-900 dark:group-hover:text-white transition-colors"></i>
+                <span class="text-xs font-mono text-stone-400 group-hover:text-amber-400 transition-colors" data-en="Copy" data-tr="Kopyala">Copy</span>
+                <i class="fa-solid fa-copy text-xs text-stone-400 group-hover:text-white transition-colors"></i>
               </div>
             </button>
           </div>

@@ -1,10 +1,12 @@
 /* ==========================================================================
-   Tuncay Yaylalı - Personal Portfolio Warm & Minimalist Stylesheet
-   Color Palette:
-   1. Warm Charcoal / Stone Background: #0F1117 (Light: #FAFAF9)
-   2. Card Surface: #181B22 (Light: #FFFFFF)
-   3. Neutral Typography: #F4F4F5 / #A1A1AA (Light: #1C1917 / #78716C)
-   4. Warm Accent: Warm Amber / Terracotta Gold (#D97706 / #F59E0B)
+   Tuncay Yaylalı - Personal Portfolio
+   Industrial Bronze & Layered Modernity Stylesheet
+   Design System:
+   - Primary Accent: Industrial Bronze / Copper (#C05621)
+   - Deep Rich Bronze: #A84417 / #8A340E
+   - Metallic Highlight: #DD8458 / #EEB79C
+   - Dark Obsidian/Slate Base: #0B0D13
+   - Layered Surfaces: Multi-stop subtle gradients + ultra-fine borders + specular highlights
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
@@ -12,8 +14,12 @@
 :root {
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-  --primary: #d97706;
-  --primary-glow: rgba(217, 119, 6, 0.15);
+  --bronze-primary: #C05621;
+  --bronze-deep: #A84417;
+  --bronze-dark: #8A340E;
+  --bronze-light: #DD8458;
+  --bronze-soft: #EEB79C;
+  --bronze-glow: rgba(192, 86, 33, 0.18);
 }
 
 html {
@@ -27,72 +33,173 @@ code, pre, .font-mono {
   font-family: var(--font-mono);
 }
 
-/* Custom Warm Scrollbar */
+/* Custom Industrial Bronze Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0F1117;
+  background: #0B0D13;
 }
 ::-webkit-scrollbar-thumb {
-  background: #262A35;
+  background: #202432;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B4050;
+  background: #C05621;
 }
 
-/* Light mode custom scrollbar */
+/* Light mode scrollbar */
 html:not(.dark) ::-webkit-scrollbar-track {
-  background: #fafaf9;
+  background: #FAF8F5;
 }
 html:not(.dark) ::-webkit-scrollbar-thumb {
-  background: #d6d3d1;
+  background: #D6D3D1;
   border-radius: 4px;
 }
 html:not(.dark) ::-webkit-scrollbar-thumb:hover {
-  background: #a8a29e;
+  background: #A84417;
 }
 
-/* Glassmorphism Classes */
+/* ==========================================================================
+   LAYERED MODERNITY & VISUAL DEPTH (Cards, Glass, Shadows & Subtle Gradients)
+   ========================================================================== */
+
+/* Glass Navigation Bar */
 .glass-nav {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+html:not(.dark) .glass-nav {
+  border-bottom: 1px solid rgba(28, 25, 23, 0.08);
 }
 
-.glass-card {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.25s ease-in-out;
+/* Universal Layered Card System */
+.layered-card,
+.project-card,
+.glass-card,
+.stat-card {
+  position: relative;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s ease,
+              background 0.28s ease;
 }
 
-.glass-card:hover {
+/* Light Mode: Soft multi-layered ambient shadow + subtle vertical gradient fill */
+html:not(.dark) .layered-card,
+html:not(.dark) .project-card,
+html:not(.dark) .glass-card,
+html:not(.dark) .stat-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%) !important;
+  border: 1px solid rgba(28, 25, 23, 0.08) !important;
+  box-shadow: 
+    0 1px 2px rgba(28, 25, 23, 0.03),
+    0 6px 18px -2px rgba(28, 25, 23, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Dark Mode: Obsidian-slate gradient + subtle translucent border + dual-layer ambient shadow + top highlight */
+html.dark .layered-card,
+html.dark .project-card,
+html.dark .glass-card,
+html.dark .stat-card {
+  background: linear-gradient(180deg, rgba(22, 26, 36, 0.82) 0%, rgba(13, 16, 23, 0.94) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 
+    0 4px 20px -2px rgba(0, 0, 0, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Subtle bronze ambient hover on cards */
+html:not(.dark) .layered-card:hover,
+html:not(.dark) .project-card:hover,
+html:not(.dark) .glass-card:hover,
+html:not(.dark) .stat-card:hover {
   transform: translateY(-3px);
+  border-color: rgba(192, 86, 33, 0.35) !important;
+  box-shadow: 
+    0 10px 24px -3px rgba(192, 86, 33, 0.12),
+    0 2px 6px rgba(28, 25, 23, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
 }
 
-/* Warm Terracotta / Amber Gradient Text */
+html.dark .layered-card:hover,
+html.dark .project-card:hover,
+html.dark .glass-card:hover,
+html.dark .stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(192, 86, 33, 0.4) !important;
+  background: linear-gradient(180deg, rgba(27, 32, 44, 0.88) 0%, rgba(16, 20, 29, 0.98) 100%) !important;
+  box-shadow: 
+    0 14px 34px -4px rgba(0, 0, 0, 0.6),
+    0 0 24px -2px rgba(192, 86, 33, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Hero Stat Cards Specific Precision Highlight */
+.stat-card {
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(192, 86, 33, 0.45), transparent);
+  pointer-events: none;
+}
+html:not(.dark) .stat-card::before {
+  background: linear-gradient(90deg, transparent, rgba(192, 86, 33, 0.3), transparent);
+}
+
+/* Industrial Bronze / Copper Gradient Text */
 .text-gradient {
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 60%, #b45309 100%);
+  background: linear-gradient(135deg, #EEB79C 0%, #DD8458 25%, #C05621 65%, #8A340E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Subtle single-hue warm background mesh */
+/* Subtle Ambient Mesh Gradients (Industrial Bronze Tone) */
 .mesh-gradient-dark {
+  background-color: #0B0D13;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(217, 119, 6, 0.07) 0px, transparent 45%),
-    radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.04) 0px, transparent 50%);
+    radial-gradient(circle at 10% 10%, rgba(192, 86, 33, 0.12) 0px, transparent 48%),
+    radial-gradient(circle at 90% 85%, rgba(192, 86, 33, 0.07) 0px, transparent 52%),
+    linear-gradient(180deg, rgba(11, 13, 19, 0.4) 0%, rgba(11, 13, 19, 1) 100%);
 }
 
 .mesh-gradient-light {
+  background-color: #FAF8F5;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(217, 119, 6, 0.05) 0px, transparent 40%),
-    radial-gradient(at 100% 100%, rgba(245, 245, 244, 0.8) 0px, transparent 50%);
+    radial-gradient(circle at 10% 10%, rgba(192, 86, 33, 0.08) 0px, transparent 42%),
+    radial-gradient(circle at 90% 90%, rgba(238, 183, 156, 0.15) 0px, transparent 50%),
+    linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
 }
 
 /* Toast notification */
 #copy-toast {
   transition: opacity 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Primary Bronze CTA Button Styling */
+.btn-bronze-primary {
+  background: linear-gradient(135deg, #C05621 0%, #A84417 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(192, 86, 33, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.22s ease-in-out !important;
+}
+.btn-bronze-primary:hover {
+  background: linear-gradient(135deg, #A84417 0%, #8A340E 100%) !important;
+  box-shadow: 0 6px 20px rgba(192, 86, 33, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
@@ -103,7 +210,7 @@ html:not(.dark) ::-webkit-scrollbar-thumb:hover {
 .project-filter-btn,
 .exp-tab-btn {
   background: transparent !important;
-  color: #44403c !important; /* stone-700: clear dark readable text */
+  color: #44403c !important; /* stone-700 */
   border: none !important;
   font-weight: 600 !important;
   cursor: pointer;
@@ -119,7 +226,7 @@ html:not(.dark) ::-webkit-scrollbar-thumb:hover {
 /* Unselected / Inactive Buttons (Dark Mode) */
 html.dark .project-filter-btn,
 html.dark .exp-tab-btn {
-  color: #a8a29e !important; /* stone-400: clear light readable text */
+  color: #a8a29e !important; /* stone-400 */
 }
 
 html.dark .project-filter-btn:hover,
@@ -127,20 +234,21 @@ html.dark .exp-tab-btn:hover {
   color: #ffffff !important;
 }
 
-/* ACTIVE State (Both Light & Dark Mode) */
+/* ACTIVE State (Both Light & Dark Mode) - Industrial Bronze Gradient */
 .project-filter-btn.active,
 .exp-tab-btn.active,
 html.dark .project-filter-btn.active,
 html.dark .exp-tab-btn.active {
-  background-color: #d97706 !important; /* warm amber-600 */
-  color: #ffffff !important; /* crisp white text */
-  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.35) !important;
+  background: linear-gradient(135deg, #C05621 0%, #A84417 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 12px rgba(192, 86, 33, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
 }
 
 .project-filter-btn.active:hover,
 .exp-tab-btn.active:hover,
 html.dark .project-filter-btn.active:hover,
 html.dark .exp-tab-btn.active:hover {
-  background-color: #b45309 !important; /* amber-700 */
+  background: linear-gradient(135deg, #A84417 0%, #8A340E 100%) !important;
   color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(192, 86, 33, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
 }
